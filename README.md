@@ -57,8 +57,8 @@ The mixed-cohort one-year AUC includes undefined fold values, and the available 
 
 ## License and citation
 
-Code is released under the MIT License. The corresponding-author name remains a placeholder in `LICENSE` because author metadata was not supplied. Citation metadata is TODO pending the final article title, author list, journal citation, and DOI.
+Code is released under the MIT License. Citation metadata will be added after the final article title, author list, journal citation, and DOI are available.
 
 ## Contact
 
-**TODO:** `[CORRESPONDING AUTHOR NAME] <[CORRESPONDING AUTHOR EMAIL]>`
+Umut Saray, [umutsaray@gmail.com](mailto:umutsaray@gmail.com)
