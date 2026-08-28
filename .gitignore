@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.token
+data/raw/**
+!data/raw/.gitkeep
+data/interim/
+phase1_fold_cache/
+*.joblib
+*.pt
+X_*.parquet
+y_*.parquet
+merged_multiomics_*.parquet
