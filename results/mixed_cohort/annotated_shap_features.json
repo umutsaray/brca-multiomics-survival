@@ -1,0 +1,222 @@
+[
+  {
+    "rank": 1,
+    "feature": "rna_ENSG00000113889.14",
+    "block": "rna",
+    "mean_abs_shap": 0.0340414009,
+    "symbol": "KNG1",
+    "name": "kininogen 1",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000113889?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 2,
+    "feature": "rna_ENSG00000255162.1",
+    "block": "rna",
+    "mean_abs_shap": 0.02987235862,
+    "symbol": "ANKRD33BP7",
+    "name": "ANKRD33B pseudogene 7",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000255162?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 3,
+    "feature": "rna_ENSG00000224922.1",
+    "block": "rna",
+    "mean_abs_shap": 0.02898440098,
+    "symbol": "eşleşme bulunamadı",
+    "name": "eşleşme bulunamadı",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000224922?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 4,
+    "feature": "rna_ENSG00000163632.14",
+    "block": "rna",
+    "mean_abs_shap": 0.02883259758,
+    "symbol": "C3orf49",
+    "name": "chromosome 3 open reading frame 49",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000163632?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 5,
+    "feature": "rna_ENSG00000167654.18",
+    "block": "rna",
+    "mean_abs_shap": 0.02779199913,
+    "symbol": "ATCAY",
+    "name": "ATCAY kinesin light chain interacting caytaxin",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000167654?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 6,
+    "feature": "rna_ENSG00000254403.1",
+    "block": "rna",
+    "mean_abs_shap": 0.02327825983,
+    "symbol": "OR10Y1P",
+    "name": "olfactory receptor family 10 subfamily Y member 1 pseudogene",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000254403?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 7,
+    "feature": "meth_cg27063372",
+    "block": "methylation",
+    "mean_abs_shap": 0.02218568258,
+    "symbol": "NHLRC4",
+    "name": "NHLRC4",
+    "family": "uygulanamaz",
+    "source": "Illumina HumanMethylation450 v1.2 manifest",
+    "source_url": "https://webdata.illumina.com/downloads/productfiles/humanmethylation450/humanmethylation450_15017482_v1-2.csv"
+  },
+  {
+    "rank": 8,
+    "feature": "clin_categorical__ethnicity.demographic_not hispanic or latino",
+    "block": "clinical",
+    "mean_abs_shap": 0.0206330401,
+    "symbol": "uygulanamaz",
+    "name": "categorical: ethnicity.demographic not hispanic or latino",
+    "family": "uygulanamaz",
+    "source": "Girdi clinical özellik adı",
+    "source_url": "shap_top_features.md"
+  },
+  {
+    "rank": 9,
+    "feature": "rna_ENSG00000253346.1",
+    "block": "rna",
+    "mean_abs_shap": 0.0205081231,
+    "symbol": "GTF2A2P1",
+    "name": "GTF2A2 pseudogene 1",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000253346?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 10,
+    "feature": "rna_ENSG00000285990.1",
+    "block": "rna",
+    "mean_abs_shap": 0.01889602682,
+    "symbol": "NBEAP6",
+    "name": "neurobeachin pseudogene 6",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000285990?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 11,
+    "feature": "mirna_hsa-mir-4751",
+    "block": "mirna",
+    "mean_abs_shap": 0.0188134765,
+    "symbol": "MIR4751",
+    "name": "Homo sapiens hsa-mir-4751 precursor miRNA; accession MI0017390",
+    "family": "eşleşme bulunamadı",
+    "source": "miRBase",
+    "source_url": "https://www.mirbase.org/hairpin/MI0017390"
+  },
+  {
+    "rank": 12,
+    "feature": "rna_ENSG00000060709.15",
+    "block": "rna",
+    "mean_abs_shap": 0.01780947573,
+    "symbol": "RIMBP2",
+    "name": "RIMS binding protein 2",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000060709?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 13,
+    "feature": "meth_cg21729992",
+    "block": "methylation",
+    "mean_abs_shap": 0.01709260807,
+    "symbol": "eşleşme bulunamadı",
+    "name": "eşleşme bulunamadı",
+    "family": "uygulanamaz",
+    "source": "Illumina HumanMethylation450 v1.2 manifest",
+    "source_url": "https://webdata.illumina.com/downloads/productfiles/humanmethylation450/humanmethylation450_15017482_v1-2.csv"
+  },
+  {
+    "rank": 14,
+    "feature": "rna_ENSG00000182591.6",
+    "block": "rna",
+    "mean_abs_shap": 0.01700357679,
+    "symbol": "KRTAP11-1",
+    "name": "keratin associated protein 11-1",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000182591?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 15,
+    "feature": "meth_cg08481075",
+    "block": "methylation",
+    "mean_abs_shap": 0.01697875864,
+    "symbol": "COL11A2",
+    "name": "COL11A2",
+    "family": "uygulanamaz",
+    "source": "Illumina HumanMethylation450 v1.2 manifest",
+    "source_url": "https://webdata.illumina.com/downloads/productfiles/humanmethylation450/humanmethylation450_15017482_v1-2.csv"
+  },
+  {
+    "rank": 16,
+    "feature": "rna_ENSG00000080910.13",
+    "block": "rna",
+    "mean_abs_shap": 0.01681640248,
+    "symbol": "CFHR2",
+    "name": "complement factor H related 2",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000080910?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 17,
+    "feature": "rna_ENSG00000231861.2",
+    "block": "rna",
+    "mean_abs_shap": 0.01674536097,
+    "symbol": "OR5K2",
+    "name": "olfactory receptor family 5 subfamily K member 2",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000231861?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 18,
+    "feature": "meth_cg08923594",
+    "block": "methylation",
+    "mean_abs_shap": 0.01666719795,
+    "symbol": "CAMTA1",
+    "name": "CAMTA1",
+    "family": "uygulanamaz",
+    "source": "Illumina HumanMethylation450 v1.2 manifest",
+    "source_url": "https://webdata.illumina.com/downloads/productfiles/humanmethylation450/humanmethylation450_15017482_v1-2.csv"
+  },
+  {
+    "rank": 19,
+    "feature": "rna_ENSG00000287179.1",
+    "block": "rna",
+    "mean_abs_shap": 0.01648432732,
+    "symbol": "eşleşme bulunamadı",
+    "name": "eşleşme bulunamadı",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000287179?fields=symbol,name,entrezgene"
+  },
+  {
+    "rank": 20,
+    "feature": "rna_ENSG00000181788.4",
+    "block": "rna",
+    "mean_abs_shap": 0.01643493336,
+    "symbol": "SIAH2",
+    "name": "siah E3 ubiquitin protein ligase 2",
+    "family": "uygulanamaz",
+    "source": "MyGene.info",
+    "source_url": "https://mygene.info/v3/gene/ENSG00000181788?fields=symbol,name,entrezgene"
+  }
+]

@@ -1,0 +1,299 @@
+{
+  "n_samples": 842,
+  "folds": 5,
+  "stratified_by": "event",
+  "random_state": 42,
+  "top_n_per_omics_per_fold": 200,
+  "fold_results": [
+    {
+      "fold": 1,
+      "train_samples": 673,
+      "test_samples": 169,
+      "train_events": 105,
+      "test_events": 27,
+      "selected_features": 616,
+      "selection": {
+        "rna": {
+          "candidates": 60660,
+          "valid": 57907,
+          "selected": 200,
+          "boundary_p_value": 9.222760530664893e-06
+        },
+        "mirna": {
+          "candidates": 1881,
+          "valid": 1573,
+          "selected": 200,
+          "boundary_p_value": 0.057169020936917454
+        },
+        "methylation": {
+          "candidates": 10000,
+          "valid": 10000,
+          "selected": 200,
+          "boundary_p_value": 0.00043027702350307634
+        }
+      },
+      "coxph": {
+        "c_index": 0.6569435637285986,
+        "seconds": 92.50023370003328,
+        "warnings": [
+          "Newton-Raphson failed to converge sufficiently. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model"
+        ],
+        "excluded_separation_features": [
+          "mirna_hsa-mir-640",
+          "clin_categorical__race.demographic_american indian or alaska native",
+          "clin_categorical__ethnicity.demographic_hispanic or latino"
+        ]
+      },
+      "rsf": {
+        "c_index": 0.6556753329105898,
+        "seconds": 3.2257436998188496
+      },
+      "deepsurv": {
+        "c_index": 0.62143310082435,
+        "seconds": 1.6557004998903722,
+        "best_epoch": 33,
+        "best_validation_c_index": 0.9137199434229137
+      },
+      "selection_seconds": 75.80470729991794,
+      "total_seconds": 173.3502260998357
+    },
+    {
+      "fold": 2,
+      "train_samples": 673,
+      "test_samples": 169,
+      "train_events": 105,
+      "test_events": 27,
+      "selected_features": 616,
+      "selection": {
+        "rna": {
+          "candidates": 60660,
+          "valid": 57906,
+          "selected": 200,
+          "boundary_p_value": 0.00026252403366688404
+        },
+        "mirna": {
+          "candidates": 1881,
+          "valid": 1576,
+          "selected": 200,
+          "boundary_p_value": 0.0946754669217764
+        },
+        "methylation": {
+          "candidates": 10000,
+          "valid": 10000,
+          "selected": 200,
+          "boundary_p_value": 0.004797642034393333
+        }
+      },
+      "coxph": {
+        "c_index": 0.6470878578479763,
+        "seconds": 19.188049899879843,
+        "warnings": [
+          "Newton-Raphson failed to converge sufficiently. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model"
+        ],
+        "excluded_separation_features": [
+          "clin_categorical__gender.demographic_female",
+          "clin_categorical__gender.demographic_male",
+          "clin_categorical__race.demographic_american indian or alaska native"
+        ]
+      },
+      "rsf": {
+        "c_index": 0.7872655478775913,
+        "seconds": 2.9683020000811666
+      },
+      "deepsurv": {
+        "c_index": 0.6752221125370188,
+        "seconds": 1.1000895998440683,
+        "best_epoch": 51,
+        "best_validation_c_index": 0.8613138686131386
+      },
+      "selection_seconds": 75.40049969987012,
+      "total_seconds": 98.78439339995384
+    },
+    {
+      "fold": 3,
+      "train_samples": 674,
+      "test_samples": 168,
+      "train_events": 106,
+      "test_events": 26,
+      "selected_features": 616,
+      "selection": {
+        "rna": {
+          "candidates": 60660,
+          "valid": 57889,
+          "selected": 200,
+          "boundary_p_value": 1.07778692154871e-05
+        },
+        "mirna": {
+          "candidates": 1881,
+          "valid": 1577,
+          "selected": 200,
+          "boundary_p_value": 0.05985209412104247
+        },
+        "methylation": {
+          "candidates": 10000,
+          "valid": 10000,
+          "selected": 200,
+          "boundary_p_value": 0.0008923369023441303
+        }
+      },
+      "coxph": {
+        "c_index": 0.7419354838709677,
+        "seconds": 26.258788200095296,
+        "warnings": [],
+        "excluded_separation_features": [
+          "clin_categorical__race.demographic_american indian or alaska native",
+          "clin_categorical__race.demographic_not reported"
+        ]
+      },
+      "rsf": {
+        "c_index": 0.6466275659824047,
+        "seconds": 3.779354600002989
+      },
+      "deepsurv": {
+        "c_index": 0.624633431085044,
+        "seconds": 0.5890660998411477,
+        "best_epoch": 21,
+        "best_validation_c_index": 0.8438030560271647
+      },
+      "selection_seconds": 75.57366219977848,
+      "total_seconds": 106.3447294998914
+    },
+    {
+      "fold": 4,
+      "train_samples": 674,
+      "test_samples": 168,
+      "train_events": 106,
+      "test_events": 26,
+      "selected_features": 616,
+      "selection": {
+        "rna": {
+          "candidates": 60660,
+          "valid": 57869,
+          "selected": 200,
+          "boundary_p_value": 1.0184989000980298e-05
+        },
+        "mirna": {
+          "candidates": 1881,
+          "valid": 1573,
+          "selected": 200,
+          "boundary_p_value": 0.04951828000704695
+        },
+        "methylation": {
+          "candidates": 10000,
+          "valid": 10000,
+          "selected": 200,
+          "boundary_p_value": 0.00019351671467516317
+        }
+      },
+      "coxph": {
+        "c_index": 0.5938287153652393,
+        "seconds": 19.17247789981775,
+        "warnings": [
+          "Newton-Raphson failed to converge sufficiently. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model"
+        ],
+        "excluded_separation_features": [
+          "clin_categorical__race.demographic_american indian or alaska native"
+        ]
+      },
+      "rsf": {
+        "c_index": 0.5094458438287154,
+        "seconds": 3.29202020005323
+      },
+      "deepsurv": {
+        "c_index": 0.5157430730478589,
+        "seconds": 0.8720362999010831,
+        "best_epoch": 47,
+        "best_validation_c_index": 0.9437689969604863
+      },
+      "selection_seconds": 72.74738739989698,
+      "total_seconds": 96.2102057999
+    },
+    {
+      "fold": 5,
+      "train_samples": 674,
+      "test_samples": 168,
+      "train_events": 106,
+      "test_events": 26,
+      "selected_features": 616,
+      "selection": {
+        "rna": {
+          "candidates": 60660,
+          "valid": 57800,
+          "selected": 200,
+          "boundary_p_value": 1.9492531102716694e-06
+        },
+        "mirna": {
+          "candidates": 1881,
+          "valid": 1565,
+          "selected": 200,
+          "boundary_p_value": 0.053232463044201636
+        },
+        "methylation": {
+          "candidates": 10000,
+          "valid": 10000,
+          "selected": 200,
+          "boundary_p_value": 0.001510107605823854
+        }
+      },
+      "coxph": {
+        "c_index": 0.5884261763115197,
+        "seconds": 26.82537480001338,
+        "warnings": [
+          "Newton-Raphson failed to converge sufficiently. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model"
+        ],
+        "excluded_separation_features": [
+          "rna_ENSG00000233699.2",
+          "clin_categorical__race.demographic_american indian or alaska native"
+        ]
+      },
+      "rsf": {
+        "c_index": 0.6836127636560303,
+        "seconds": 2.5019451999105513
+      },
+      "deepsurv": {
+        "c_index": 0.6197944835045971,
+        "seconds": 0.9641342000104487,
+        "best_epoch": 54,
+        "best_validation_c_index": 0.9245283018867925
+      },
+      "selection_seconds": 75.66703329980373,
+      "total_seconds": 106.0872887999285
+    }
+  ],
+  "summary": {
+    "coxph": {
+      "mean_c_index": 0.6456443594248603,
+      "sample_standard_deviation": 0.06196877802731796,
+      "fold_c_indices": [
+        0.6569435637285986,
+        0.6470878578479763,
+        0.7419354838709677,
+        0.5938287153652393,
+        0.5884261763115197
+      ]
+    },
+    "rsf": {
+      "mean_c_index": 0.6565254108510663,
+      "sample_standard_deviation": 0.09944571020502381,
+      "fold_c_indices": [
+        0.6556753329105898,
+        0.7872655478775913,
+        0.6466275659824047,
+        0.5094458438287154,
+        0.6836127636560303
+      ]
+    },
+    "deepsurv": {
+      "mean_c_index": 0.6113652401997738,
+      "sample_standard_deviation": 0.05824465178267383,
+      "fold_c_indices": [
+        0.62143310082435,
+        0.6752221125370188,
+        0.624633431085044,
+        0.5157430730478589,
+        0.6197944835045971
+      ]
+    }
+  },
+  "total_seconds": 580.7848909001332
+}

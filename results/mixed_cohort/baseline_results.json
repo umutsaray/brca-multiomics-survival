@@ -1,0 +1,44 @@
+{
+  "train_shape": [
+    673,
+    616
+  ],
+  "test_shape": [
+    169,
+    616
+  ],
+  "models": {
+    "coxph": {
+      "test_c_index": 0.7064765300059418,
+      "penalizer": 0.1,
+      "max_steps": 50,
+      "warnings": [
+        "Newton-Raphson failed to converge sufficiently. Please see the following tips in the lifelines documentation: https://lifelines.readthedocs.io/en/latest/Examples.html#problems-with-convergence-in-the-cox-proportional-hazard-model"
+      ],
+      "complete_separation_columns_excluded": [
+        "mirna_hsa-mir-8073",
+        "clin_categorical__race.demographic_american indian or alaska native"
+      ],
+      "feature_count_after_exclusion": 614,
+      "elapsed_seconds": 26.393795700045303,
+      "model_file": "coxph_baseline.joblib"
+    },
+    "random_survival_forest": {
+      "test_c_index": 0.714795008912656,
+      "n_estimators": 500,
+      "min_samples_split": 10,
+      "min_samples_leaf": 5,
+      "random_state": 42,
+      "elapsed_seconds": 3.2361838999204338,
+      "model_file": "rsf_baseline.joblib"
+    }
+  },
+  "comparison_to_previous_run": {
+    "previous_coxph_test_c_index": 0.7296494355317885,
+    "new_coxph_test_c_index": 0.7064765300059418,
+    "coxph_delta": -0.02317290552584672,
+    "previous_rsf_test_c_index": 0.7243018419489008,
+    "new_rsf_test_c_index": 0.714795008912656,
+    "rsf_delta": -0.009506833036244777
+  }
+}

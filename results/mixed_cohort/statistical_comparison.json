@@ -1,0 +1,39 @@
+{
+  "cv_fold_count": 5,
+  "bootstrap_iterations": 1000,
+  "paired_resampling": true,
+  "alpha": 0.05,
+  "comparisons": {
+    "DeepSurv vs CoxPH": {
+      "fold_count": 5,
+      "wilcoxon_statistic": 3.0,
+      "wilcoxon_two_sided_p_value": 0.3125,
+      "paired_bootstrap_iterations": 1000,
+      "observed_test_c_index_difference": 0.039215686274509776,
+      "bootstrap_mean_difference": 0.03934835766237502,
+      "bootstrap_median_difference": 0.03426074917562494,
+      "bootstrap_95_ci_lower": -0.05316103010958706,
+      "bootstrap_95_ci_upper": 0.1663211835726834,
+      "bootstrap_ci_includes_zero": true,
+      "bootstrap_empirical_two_sided_p_value": 0.5214785214785215,
+      "significant_by_percentile_ci": false,
+      "interpretation": "Anlamlı fark bulunamadı; paired bootstrap %95 CI sıfırı içeriyor."
+    },
+    "DeepSurv vs Random Survival Forest": {
+      "fold_count": 5,
+      "wilcoxon_statistic": 1.0,
+      "wilcoxon_two_sided_p_value": 0.125,
+      "paired_bootstrap_iterations": 1000,
+      "observed_test_c_index_difference": 0.030897207367795554,
+      "bootstrap_mean_difference": 0.03131173145862762,
+      "bootstrap_median_difference": 0.03191107934312848,
+      "bootstrap_95_ci_lower": -0.06476056379129216,
+      "bootstrap_95_ci_upper": 0.1259146529730082,
+      "bootstrap_ci_includes_zero": true,
+      "bootstrap_empirical_two_sided_p_value": 0.4955044955044955,
+      "significant_by_percentile_ci": false,
+      "interpretation": "Anlamlı fark bulunamadı; paired bootstrap %95 CI sıfırı içeriyor."
+    }
+  },
+  "power_note": "Wilcoxon signed-rank test uses only five paired folds (n=5); statistical power and attainable exact p-value resolution are low."
+}

@@ -1,0 +1,103 @@
+# Additional OOF Metrics
+
+```json
+{
+  "coxph": {
+    "uno_c_index": 0.6185880716976415,
+    "time_dependent_auc": {
+      "365.0": 0.6593106463494747,
+      "1095.0": 0.6640293767536781,
+      "1825.0": 0.6506985882325578
+    },
+    "mean_auc": 0.6573733770182393,
+    "integrated_brier_score": 0.09018378373907303,
+    "calibration_5year_points": [
+      {
+        "predicted": 0.7672244415092021,
+        "observed_km": 0.8423190109273127
+      },
+      {
+        "predicted": 0.7899771000107247,
+        "observed_km": 0.7952638994524818
+      },
+      {
+        "predicted": 0.7911485049803912,
+        "observed_km": 0.7817446965701729
+      },
+      {
+        "predicted": 0.7957069709980937,
+        "observed_km": 0.7671389655414784
+      },
+      {
+        "predicted": 0.8034638385642147,
+        "observed_km": 0.7384736548604095
+      }
+    ]
+  },
+  "rsf": {
+    "uno_c_index": 0.6500978657138683,
+    "time_dependent_auc": {
+      "365.0": 0.6824820957037523,
+      "1095.0": 0.7221211664057596,
+      "1825.0": 0.6748232775279934
+    },
+    "mean_auc": 0.6961617053637383,
+    "integrated_brier_score": 0.08932592153676033,
+    "calibration_5year_points": [
+      {
+        "predicted": 0.6744238295767757,
+        "observed_km": 0.6582769039648344
+      },
+      {
+        "predicted": 0.7830401386059979,
+        "observed_km": 0.7331471061395893
+      },
+      {
+        "predicted": 0.8115518274076449,
+        "observed_km": 0.7671504448110448
+      },
+      {
+        "predicted": 0.8339940944875851,
+        "observed_km": 0.8915233376899216
+      },
+      {
+        "predicted": 0.8569603435827178,
+        "observed_km": 0.9040870096636855
+      }
+    ]
+  },
+  "deepsurv": {
+    "uno_c_index": 0.5890389620010166,
+    "time_dependent_auc": {
+      "365.0": 0.6374884059669079,
+      "1095.0": 0.723719768654359,
+      "1825.0": 0.6236431080306162
+    },
+    "mean_auc": 0.6685510965056621,
+    "integrated_brier_score": 0.09005235936076544,
+    "calibration_5year_points": [
+      {
+        "predicted": 0.7394544770547087,
+        "observed_km": 0.6380369830816548
+      },
+      {
+        "predicted": 0.7779516329615506,
+        "observed_km": 0.8355932979120336
+      },
+      {
+        "predicted": 0.7860933719456699,
+        "observed_km": 0.8691944957718035
+      },
+      {
+        "predicted": 0.8077923194549074,
+        "observed_km": 0.8038799426918946
+      },
+      {
+        "predicted": 0.8355050734187212,
+        "observed_km": 0.7991435824356141
+      }
+    ]
+  },
+  "absolute_survival_method": "One-covariate Cox calibration cross-fitted by outer fold; held-fold outcomes were not used to calibrate their predictions."
+}
+```
