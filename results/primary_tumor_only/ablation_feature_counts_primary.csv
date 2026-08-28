@@ -1,0 +1,101 @@
+cohort,config,fold,omics_block,n_features_selected
+primary,Clinical-only,1,clinical,16
+primary,RNA-seq only,1,rna,200
+primary,Methylation only,1,methylation,0
+primary,miRNA only,1,mirna,2
+primary,Clinical + RNA-seq,1,rna,200
+primary,Clinical + RNA-seq,1,clinical,16
+primary,Clinical + RNA-seq + Methylation,1,rna,200
+primary,Clinical + RNA-seq + Methylation,1,methylation,0
+primary,Clinical + RNA-seq + Methylation,1,clinical,16
+primary,Clinical + RNA-seq + miRNA,1,rna,200
+primary,Clinical + RNA-seq + miRNA,1,mirna,2
+primary,Clinical + RNA-seq + miRNA,1,clinical,16
+primary,Full,1,rna,200
+primary,Full,1,mirna,2
+primary,Full,1,methylation,0
+primary,Full,1,clinical,16
+primary,Clinical + Methylation,1,methylation,0
+primary,Clinical + Methylation,1,clinical,16
+primary,Clinical + miRNA,1,mirna,2
+primary,Clinical + miRNA,1,clinical,16
+primary,Clinical-only,2,clinical,15
+primary,RNA-seq only,2,rna,184
+primary,Methylation only,2,methylation,7
+primary,miRNA only,2,mirna,15
+primary,Clinical + RNA-seq,2,rna,184
+primary,Clinical + RNA-seq,2,clinical,15
+primary,Clinical + RNA-seq + Methylation,2,rna,184
+primary,Clinical + RNA-seq + Methylation,2,methylation,7
+primary,Clinical + RNA-seq + Methylation,2,clinical,15
+primary,Clinical + RNA-seq + miRNA,2,rna,184
+primary,Clinical + RNA-seq + miRNA,2,mirna,15
+primary,Clinical + RNA-seq + miRNA,2,clinical,15
+primary,Full,2,rna,184
+primary,Full,2,mirna,15
+primary,Full,2,methylation,7
+primary,Full,2,clinical,15
+primary,Clinical + Methylation,2,methylation,7
+primary,Clinical + Methylation,2,clinical,15
+primary,Clinical + miRNA,2,mirna,15
+primary,Clinical + miRNA,2,clinical,15
+primary,Clinical-only,3,clinical,16
+primary,RNA-seq only,3,rna,123
+primary,Methylation only,3,methylation,0
+primary,miRNA only,3,mirna,6
+primary,Clinical + RNA-seq,3,rna,123
+primary,Clinical + RNA-seq,3,clinical,16
+primary,Clinical + RNA-seq + Methylation,3,rna,123
+primary,Clinical + RNA-seq + Methylation,3,methylation,0
+primary,Clinical + RNA-seq + Methylation,3,clinical,16
+primary,Clinical + RNA-seq + miRNA,3,rna,123
+primary,Clinical + RNA-seq + miRNA,3,mirna,6
+primary,Clinical + RNA-seq + miRNA,3,clinical,16
+primary,Full,3,rna,123
+primary,Full,3,mirna,6
+primary,Full,3,methylation,0
+primary,Full,3,clinical,16
+primary,Clinical + Methylation,3,methylation,0
+primary,Clinical + Methylation,3,clinical,16
+primary,Clinical + miRNA,3,mirna,6
+primary,Clinical + miRNA,3,clinical,16
+primary,Clinical-only,4,clinical,16
+primary,RNA-seq only,4,rna,200
+primary,Methylation only,4,methylation,1
+primary,miRNA only,4,mirna,13
+primary,Clinical + RNA-seq,4,rna,200
+primary,Clinical + RNA-seq,4,clinical,16
+primary,Clinical + RNA-seq + Methylation,4,rna,200
+primary,Clinical + RNA-seq + Methylation,4,methylation,1
+primary,Clinical + RNA-seq + Methylation,4,clinical,16
+primary,Clinical + RNA-seq + miRNA,4,rna,200
+primary,Clinical + RNA-seq + miRNA,4,mirna,13
+primary,Clinical + RNA-seq + miRNA,4,clinical,16
+primary,Full,4,rna,200
+primary,Full,4,mirna,13
+primary,Full,4,methylation,1
+primary,Full,4,clinical,16
+primary,Clinical + Methylation,4,methylation,1
+primary,Clinical + Methylation,4,clinical,16
+primary,Clinical + miRNA,4,mirna,13
+primary,Clinical + miRNA,4,clinical,16
+primary,Clinical-only,5,clinical,16
+primary,RNA-seq only,5,rna,200
+primary,Methylation only,5,methylation,9
+primary,miRNA only,5,mirna,7
+primary,Clinical + RNA-seq,5,rna,200
+primary,Clinical + RNA-seq,5,clinical,16
+primary,Clinical + RNA-seq + Methylation,5,rna,200
+primary,Clinical + RNA-seq + Methylation,5,methylation,9
+primary,Clinical + RNA-seq + Methylation,5,clinical,16
+primary,Clinical + RNA-seq + miRNA,5,rna,200
+primary,Clinical + RNA-seq + miRNA,5,mirna,7
+primary,Clinical + RNA-seq + miRNA,5,clinical,16
+primary,Full,5,rna,200
+primary,Full,5,mirna,7
+primary,Full,5,methylation,9
+primary,Full,5,clinical,16
+primary,Clinical + Methylation,5,methylation,9
+primary,Clinical + Methylation,5,clinical,16
+primary,Clinical + miRNA,5,mirna,7
+primary,Clinical + miRNA,5,clinical,16

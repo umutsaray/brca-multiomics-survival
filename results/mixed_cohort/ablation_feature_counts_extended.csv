@@ -1,0 +1,101 @@
+cohort,config,fold,omics_block,n_features_selected
+mixed,Clinical-only,1,clinical,15
+mixed,RNA-seq only,1,rna,200
+mixed,Methylation only,1,methylation,115
+mixed,miRNA only,1,mirna,19
+mixed,Clinical + RNA-seq,1,rna,200
+mixed,Clinical + RNA-seq,1,clinical,15
+mixed,Clinical + RNA-seq + Methylation,1,rna,200
+mixed,Clinical + RNA-seq + Methylation,1,methylation,115
+mixed,Clinical + RNA-seq + Methylation,1,clinical,15
+mixed,Clinical + RNA-seq + miRNA,1,rna,200
+mixed,Clinical + RNA-seq + miRNA,1,mirna,19
+mixed,Clinical + RNA-seq + miRNA,1,clinical,15
+mixed,Full,1,rna,200
+mixed,Full,1,mirna,19
+mixed,Full,1,methylation,115
+mixed,Full,1,clinical,15
+mixed,Clinical + Methylation,1,methylation,115
+mixed,Clinical + Methylation,1,clinical,15
+mixed,Clinical + miRNA,1,mirna,19
+mixed,Clinical + miRNA,1,clinical,15
+mixed,Clinical-only,2,clinical,16
+mixed,RNA-seq only,2,rna,200
+mixed,Methylation only,2,methylation,96
+mixed,miRNA only,2,mirna,9
+mixed,Clinical + RNA-seq,2,rna,200
+mixed,Clinical + RNA-seq,2,clinical,16
+mixed,Clinical + RNA-seq + Methylation,2,rna,200
+mixed,Clinical + RNA-seq + Methylation,2,methylation,96
+mixed,Clinical + RNA-seq + Methylation,2,clinical,16
+mixed,Clinical + RNA-seq + miRNA,2,rna,200
+mixed,Clinical + RNA-seq + miRNA,2,mirna,9
+mixed,Clinical + RNA-seq + miRNA,2,clinical,16
+mixed,Full,2,rna,200
+mixed,Full,2,mirna,9
+mixed,Full,2,methylation,96
+mixed,Full,2,clinical,16
+mixed,Clinical + Methylation,2,methylation,96
+mixed,Clinical + Methylation,2,clinical,16
+mixed,Clinical + miRNA,2,mirna,9
+mixed,Clinical + miRNA,2,clinical,16
+mixed,Clinical-only,3,clinical,16
+mixed,RNA-seq only,3,rna,200
+mixed,Methylation only,3,methylation,159
+mixed,miRNA only,3,mirna,28
+mixed,Clinical + RNA-seq,3,rna,200
+mixed,Clinical + RNA-seq,3,clinical,16
+mixed,Clinical + RNA-seq + Methylation,3,rna,200
+mixed,Clinical + RNA-seq + Methylation,3,methylation,159
+mixed,Clinical + RNA-seq + Methylation,3,clinical,16
+mixed,Clinical + RNA-seq + miRNA,3,rna,200
+mixed,Clinical + RNA-seq + miRNA,3,mirna,28
+mixed,Clinical + RNA-seq + miRNA,3,clinical,16
+mixed,Full,3,rna,200
+mixed,Full,3,mirna,28
+mixed,Full,3,methylation,159
+mixed,Full,3,clinical,16
+mixed,Clinical + Methylation,3,methylation,159
+mixed,Clinical + Methylation,3,clinical,16
+mixed,Clinical + miRNA,3,mirna,28
+mixed,Clinical + miRNA,3,clinical,16
+mixed,Clinical-only,4,clinical,16
+mixed,RNA-seq only,4,rna,200
+mixed,Methylation only,4,methylation,200
+mixed,miRNA only,4,mirna,23
+mixed,Clinical + RNA-seq,4,rna,200
+mixed,Clinical + RNA-seq,4,clinical,16
+mixed,Clinical + RNA-seq + Methylation,4,rna,200
+mixed,Clinical + RNA-seq + Methylation,4,methylation,200
+mixed,Clinical + RNA-seq + Methylation,4,clinical,16
+mixed,Clinical + RNA-seq + miRNA,4,rna,200
+mixed,Clinical + RNA-seq + miRNA,4,mirna,23
+mixed,Clinical + RNA-seq + miRNA,4,clinical,16
+mixed,Full,4,rna,200
+mixed,Full,4,mirna,23
+mixed,Full,4,methylation,200
+mixed,Full,4,clinical,16
+mixed,Clinical + Methylation,4,methylation,200
+mixed,Clinical + Methylation,4,clinical,16
+mixed,Clinical + miRNA,4,mirna,23
+mixed,Clinical + miRNA,4,clinical,16
+mixed,Clinical-only,5,clinical,16
+mixed,RNA-seq only,5,rna,200
+mixed,Methylation only,5,methylation,200
+mixed,miRNA only,5,mirna,7
+mixed,Clinical + RNA-seq,5,rna,200
+mixed,Clinical + RNA-seq,5,clinical,16
+mixed,Clinical + RNA-seq + Methylation,5,rna,200
+mixed,Clinical + RNA-seq + Methylation,5,methylation,200
+mixed,Clinical + RNA-seq + Methylation,5,clinical,16
+mixed,Clinical + RNA-seq + miRNA,5,rna,200
+mixed,Clinical + RNA-seq + miRNA,5,mirna,7
+mixed,Clinical + RNA-seq + miRNA,5,clinical,16
+mixed,Full,5,rna,200
+mixed,Full,5,mirna,7
+mixed,Full,5,methylation,200
+mixed,Full,5,clinical,16
+mixed,Clinical + Methylation,5,methylation,200
+mixed,Clinical + Methylation,5,clinical,16
+mixed,Clinical + miRNA,5,mirna,7
+mixed,Clinical + miRNA,5,clinical,16

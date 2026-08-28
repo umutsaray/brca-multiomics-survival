@@ -27,7 +27,7 @@ This document records the settings actually used by the Phase 1/2 code. Global C
 - Training is full-batch: batch size equals the fit subset size. The risk set therefore spans the complete fit subset at every optimization step.
 - Loss is the mean negative Cox partial log-likelihood. Event times are sorted descending; `logcumsumexp` forms risk sets. Ties use the code's Breslow-style shared full tied risk set.
 - Internal validation fraction is 0.15 and is event-stratified via `train_test_split`. It is not explicitly participant-grouped. This is equivalent to participant splitting only in the primary-only cohort; in the mixed cohort, duplicate records from a participant can cross this internal split.
-- Univariate selection and outer-fold imputation are performed before this internal validation split, so the validation outcomes are not used by the univariate Cox ranking, but validation feature values are visible to outer-training preprocessing/selection. Scaling is fitted only on the neural-network fit subset and then applied to validation/test.
+- Univariate selection and outer-fold imputation are performed before this internal validation split. Therefore, the survival outcomes of records later assigned to internal validation are used by the univariate Cox ranking. This creates minor leakage into the internal early-stopping validation assessment, although the untouched outer-test fold remains excluded from preprocessing, selection, training, and early stopping. Scaling is fitted only on the neural-network fit subset and then applied to validation/test. See `deepsurv_internal_split_audit.md`.
 - Seeds set Python `random`, NumPy, and PyTorch; deterministic algorithms are requested with warning-only fallback. Ablation seed is `42 + outer_fold`; sensitivity seed is `42 + 100*outer_fold + N`.
 - Reported risk is the network's raw scalar output (log-risk scale).
 
@@ -38,4 +38,3 @@ For every outer fold, methylation variance selection, KNN imputation, clinical i
 ## Feature-selection procedures and the former Table 3b/Table 4 mismatch
 
 `select_features_v2.py` is a feature-count sensitivity analysis: it takes raw-p-value-ranked top N features per omics block without an FDR cutoff and changes the model seed by N. `ablation_study.py` uses BH-FDR < 0.05 and then caps each block at 200 features, with a different model seed schedule. Both use the same outer participant folds, but they do not estimate the same feature set/model realization. Their N=200/full values therefore must not be presented as duplicate estimates. The FDR ablation is the canonical full-model estimate for comparisons with clinical-only; the raw-p top-N result is a sensitivity analysis.
-
