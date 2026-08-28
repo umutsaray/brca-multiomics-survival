@@ -1,0 +1,1478 @@
+{
+  "method": {
+    "time_dependent_auc_horizons_days": [
+      365.0,
+      1095.0,
+      1825.0
+    ],
+    "mean_auc_definition": "sksurv cumulative_dynamic_auc survival-function-weighted mean over the supplied 1/3/5-year grid; not arithmetic mean",
+    "ibs_grid": "100 equally spaced points from day 365 through day 1825",
+    "ipcw_censoring_source": "for each held-out outer fold, the other four OOF-fold outcomes; never that held fold",
+    "aggregation": "test-fold-N-weighted mean",
+    "absolute_survival": "one-covariate Cox calibration fitted on the other four OOF folds"
+  },
+  "mixed": {
+    "Clinical-only": {
+      "coxph": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.4169198217081488,
+            "auc_1y": 0.9934210526315789,
+            "auc_3y": 0.7759596097957102,
+            "auc_5y": 0.5620878780672507,
+            "weighted_mean_auc": 0.6518946199289527,
+            "ibs": 0.051301178470710446
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.6873610994411892,
+            "auc_1y": 0.8231022330402775,
+            "auc_3y": 0.7458348841944384,
+            "auc_5y": 0.7148600993654811,
+            "weighted_mean_auc": 0.7551144752397622,
+            "ibs": 0.10771444477295293
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.6214474665897076,
+            "auc_1y": NaN,
+            "auc_3y": 0.6893402142773537,
+            "auc_5y": 0.8331843921052808,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.08354628948787929
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.774843517232488,
+            "auc_1y": 0.9125919264120904,
+            "auc_3y": 0.7834664397178188,
+            "auc_5y": 0.7463847608396313,
+            "weighted_mean_auc": 0.7884822594530553,
+            "ibs": 0.11364464442106559
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.6380407912345885,
+            "auc_1y": 0.9600080545850727,
+            "auc_3y": 0.6295209035293232,
+            "auc_5y": 0.6967820415433367,
+            "weighted_mean_auc": 0.7057283247906543,
+            "ibs": 0.08774334549872925
+          }
+        ],
+        "mean_uno_c_index": 0.6279095216996384,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.724780869355947,
+        "mean_auc_5y": 0.7106857810987027,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.08881825609898397,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7467585028227387,
+            "observed_km_survival": 0.6730075220099467,
+            "greenwood_95_ci": [
+              0.5540349125268316,
+              0.7667835440236904
+            ],
+            "n_records": 169,
+            "n_unique_participants": 156,
+            "at_risk_unique_participants_at_5y": 27,
+            "events_by_5y": 31
+          },
+          {
+            "predicted_survival_mean": 0.7875062320422588,
+            "observed_km_survival": 0.7688603477545257,
+            "greenwood_95_ci": [
+              0.6559115509322634,
+              0.8488942391140096
+            ],
+            "n_records": 168,
+            "n_unique_participants": 151,
+            "at_risk_unique_participants_at_5y": 30,
+            "events_by_5y": 21
+          },
+          {
+            "predicted_survival_mean": 0.7958075799485226,
+            "observed_km_survival": 0.7576624017105744,
+            "greenwood_95_ci": [
+              0.6462221793567263,
+              0.8382873023996236
+            ],
+            "n_records": 169,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 41,
+            "events_by_5y": 21
+          },
+          {
+            "predicted_survival_mean": 0.806143974081424,
+            "observed_km_survival": 0.8550854534438295,
+            "greenwood_95_ci": [
+              0.7448815375855563,
+              0.9201539391305344
+            ],
+            "n_records": 167,
+            "n_unique_participants": 155,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 11
+          },
+          {
+            "predicted_survival_mean": 0.824328544827017,
+            "observed_km_survival": 0.9054624829582758,
+            "greenwood_95_ci": [
+              0.8046721851292711,
+              0.95563265230496
+            ],
+            "n_records": 169,
+            "n_unique_participants": 155,
+            "at_risk_unique_participants_at_5y": 40,
+            "events_by_5y": 7
+          }
+        ]
+      },
+      "rsf": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.5219792253933844,
+            "auc_1y": 0.9868421052631579,
+            "auc_3y": 0.7282178176309013,
+            "auc_5y": 0.5684498796151689,
+            "weighted_mean_auc": 0.6396979305992487,
+            "ibs": 0.048375435249835154
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.6284165774162562,
+            "auc_1y": 0.7580571692307682,
+            "auc_3y": 0.679944243029856,
+            "auc_5y": 0.6737831418323271,
+            "weighted_mean_auc": 0.6970841063404044,
+            "ibs": 0.09678709187918441
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.5968958336782427,
+            "auc_1y": NaN,
+            "auc_3y": 0.7761995960987863,
+            "auc_5y": 0.8551625921994215,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.07570582664230273
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.7449839363366868,
+            "auc_1y": 0.9537018899327796,
+            "auc_3y": 0.7933514929169507,
+            "auc_5y": 0.7238545241894435,
+            "weighted_mean_auc": 0.7933803973076365,
+            "ibs": 0.10178663799922227
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.6542042108429301,
+            "auc_1y": 0.9225438524376526,
+            "auc_3y": 0.6862686101439369,
+            "auc_5y": 0.6322938642180775,
+            "weighted_mean_auc": 0.6725683859614124,
+            "ibs": 0.07877623703020735
+          }
+        ],
+        "mean_uno_c_index": 0.6294629356333962,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.7328130115830087,
+        "mean_auc_5y": 0.6906787894697782,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.08030998730826099,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.6166044994603026,
+            "observed_km_survival": 0.5804992462598729,
+            "greenwood_95_ci": [
+              0.4642759502080401,
+              0.6801050874338167
+            ],
+            "n_records": 169,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 27,
+            "events_by_5y": 41
+          },
+          {
+            "predicted_survival_mean": 0.7733405802593222,
+            "observed_km_survival": 0.842866946929208,
+            "greenwood_95_ci": [
+              0.7489096260389564,
+              0.9038712634851737
+            ],
+            "n_records": 168,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 40,
+            "events_by_5y": 16
+          },
+          {
+            "predicted_survival_mean": 0.8079270912817025,
+            "observed_km_survival": 0.7976808309790615,
+            "greenwood_95_ci": [
+              0.6892916247077581,
+              0.8716874761819217
+            ],
+            "n_records": 168,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 44,
+            "events_by_5y": 17
+          },
+          {
+            "predicted_survival_mean": 0.8375540415176805,
+            "observed_km_survival": 0.7650021181264895,
+            "greenwood_95_ci": [
+              0.6293569638361932,
+              0.856444530385774
+            ],
+            "n_records": 168,
+            "n_unique_participants": 161,
+            "at_risk_unique_participants_at_5y": 27,
+            "events_by_5y": 15
+          },
+          {
+            "predicted_survival_mean": 0.8752770934164257,
+            "observed_km_survival": 0.9697172494562497,
+            "greenwood_95_ci": [
+              0.8627475204184929,
+              0.9936153488066545
+            ],
+            "n_records": 169,
+            "n_unique_participants": 150,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 2
+          }
+        ]
+      },
+      "deepsurv": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.5834440395011952,
+            "auc_1y": 0.9736842105263157,
+            "auc_3y": 0.7085494659571433,
+            "auc_5y": 0.5435842584189217,
+            "weighted_mean_auc": 0.6170677196642965,
+            "ibs": 0.0590177082436777
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.6366937919541109,
+            "auc_1y": 0.7825275514448342,
+            "auc_3y": 0.6785030229504632,
+            "auc_5y": 0.6538797541225583,
+            "weighted_mean_auc": 0.6962640092615884,
+            "ibs": 0.10636484510142852
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.6262080530343789,
+            "auc_1y": NaN,
+            "auc_3y": 0.4147156899069331,
+            "auc_5y": 0.3748614190299316,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.08212246604238078
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.6600756712662958,
+            "auc_1y": 0.8523712234474077,
+            "auc_3y": 0.7023311749678002,
+            "auc_5y": 0.6421840026649216,
+            "weighted_mean_auc": 0.703648838900999,
+            "ibs": 0.11981797166991401
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.6484692056167005,
+            "auc_1y": 0.9668308514837822,
+            "auc_3y": 0.7179640193983499,
+            "auc_5y": 0.7044919766411203,
+            "weighted_mean_auc": 0.7325134692529877,
+            "ibs": 0.09069247371917467
+          }
+        ],
+        "mean_uno_c_index": 0.6310334831205384,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.6445688145946818,
+        "mean_auc_5y": 0.5840129608155799,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.09163552081692851,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.6984214526901011,
+            "observed_km_survival": 0.7928277378029143,
+            "greenwood_95_ci": [
+              0.6813729074685492,
+              0.8689438132501424
+            ],
+            "n_records": 169,
+            "n_unique_participants": 154,
+            "at_risk_unique_participants_at_5y": 31,
+            "events_by_5y": 19
+          },
+          {
+            "predicted_survival_mean": 0.7841494273899217,
+            "observed_km_survival": 0.7943456442106703,
+            "greenwood_95_ci": [
+              0.6758127698642535,
+              0.873469343279744
+            ],
+            "n_records": 170,
+            "n_unique_participants": 155,
+            "at_risk_unique_participants_at_5y": 34,
+            "events_by_5y": 16
+          },
+          {
+            "predicted_survival_mean": 0.7909908722156821,
+            "observed_km_survival": 0.7584655079571415,
+            "greenwood_95_ci": [
+              0.656762822276849,
+              0.8337791749527402
+            ],
+            "n_records": 166,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 41,
+            "events_by_5y": 25
+          },
+          {
+            "predicted_survival_mean": 0.8037596045503983,
+            "observed_km_survival": 0.8261712151969892,
+            "greenwood_95_ci": [
+              0.7108147077967906,
+              0.8986852371622039
+            ],
+            "n_records": 168,
+            "n_unique_participants": 154,
+            "at_risk_unique_participants_at_5y": 36,
+            "events_by_5y": 14
+          },
+          {
+            "predicted_survival_mean": 0.8302998164711993,
+            "observed_km_survival": 0.7717685982389058,
+            "greenwood_95_ci": [
+              0.6514894533253444,
+              0.8550153563248765
+            ],
+            "n_records": 169,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 34,
+            "events_by_5y": 17
+          }
+        ]
+      }
+    },
+    "Full": {
+      "coxph": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.5686073716343351,
+            "auc_1y": 0.8092105263157895,
+            "auc_3y": 0.7340056817900429,
+            "auc_5y": 0.5290995443172258,
+            "weighted_mean_auc": 0.6093826111298409,
+            "ibs": 0.060007475326220736
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.7559099485359396,
+            "auc_1y": 0.7609195582260082,
+            "auc_3y": 0.8101513547037854,
+            "auc_5y": 0.8020144511457907,
+            "weighted_mean_auc": 0.7956409485612164,
+            "ibs": 0.10879079905909453
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.5494104539656565,
+            "auc_1y": NaN,
+            "auc_3y": 0.6912692796923059,
+            "auc_5y": 0.6475751059947212,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.08223293694887207
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.7199623037888033,
+            "auc_1y": 0.6885964702846483,
+            "auc_3y": 0.7580550220441717,
+            "auc_5y": 0.7084580675797968,
+            "weighted_mean_auc": 0.7369692352784685,
+            "ibs": 0.12001045182456228
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.6414912217614086,
+            "auc_1y": 0.7067715167173565,
+            "auc_3y": 0.5933639511795467,
+            "auc_5y": 0.45507562503746224,
+            "weighted_mean_auc": 0.5117107198798819,
+            "ibs": 0.09004810636408818
+          }
+        ],
+        "mean_uno_c_index": 0.6471561898727105,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.7172701040309727,
+        "mean_auc_5y": 0.6283336853886183,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.09224838460573087,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.778346241671857,
+            "observed_km_survival": 0.8236742244068354,
+            "greenwood_95_ci": [
+              0.7525393113631541,
+              0.876031441566232
+            ],
+            "n_records": 336,
+            "n_unique_participants": 306,
+            "at_risk_unique_participants_at_5y": 74,
+            "events_by_5y": 32
+          },
+          {
+            "predicted_survival_mean": 0.7899473073949634,
+            "observed_km_survival": 0.7841450670526137,
+            "greenwood_95_ci": [
+              0.6847062600134757,
+              0.8554688548833319
+            ],
+            "n_records": 169,
+            "n_unique_participants": 155,
+            "at_risk_unique_participants_at_5y": 40,
+            "events_by_5y": 22
+          },
+          {
+            "predicted_survival_mean": 0.7945627706778605,
+            "observed_km_survival": 0.7638244427735763,
+            "greenwood_95_ci": [
+              0.6361441318369809,
+              0.8517428688459328
+            ],
+            "n_records": 168,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 32,
+            "events_by_5y": 17
+          },
+          {
+            "predicted_survival_mean": 0.8025782150153029,
+            "observed_km_survival": 0.7316940826404964,
+            "greenwood_95_ci": [
+              0.6028785187342693,
+              0.8246064472688031
+            ],
+            "n_records": 169,
+            "n_unique_participants": 155,
+            "at_risk_unique_participants_at_5y": 30,
+            "events_by_5y": 20
+          }
+        ]
+      },
+      "rsf": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.6603013440178999,
+            "auc_1y": 0.513157894736842,
+            "auc_3y": 0.5529118430570736,
+            "auc_5y": 0.49551119843382735,
+            "weighted_mean_auc": 0.515370211655608,
+            "ibs": 0.061564767766293396
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.7183149068012263,
+            "auc_1y": 0.7763858086949896,
+            "auc_3y": 0.815846177146925,
+            "auc_5y": 0.8398284690377005,
+            "weighted_mean_auc": 0.8136252528799761,
+            "ibs": 0.10156912452460785
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.5202553872345652,
+            "auc_1y": NaN,
+            "auc_3y": 0.5829966628364794,
+            "auc_5y": 0.5676165506894908,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.07982362202406765
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.6844722499030806,
+            "auc_1y": 0.6545319413434205,
+            "auc_3y": 0.7762008090214584,
+            "auc_5y": 0.7021111520016684,
+            "weighted_mean_auc": 0.742646588636036,
+            "ibs": 0.11555969832848784
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.6978204565837756,
+            "auc_1y": 0.6071861499489948,
+            "auc_3y": 0.714987170630888,
+            "auc_5y": 0.6905640722642155,
+            "weighted_mean_auc": 0.6884702128333817,
+            "ibs": 0.08601785321513353
+          }
+        ],
+        "mean_uno_c_index": 0.6563157987996423,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.6887239374252337,
+        "mean_auc_5y": 0.6592146764275363,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.08893523588573252,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.6776769799305847,
+            "observed_km_survival": 0.6556269877000797,
+            "greenwood_95_ci": [
+              0.5401232540366838,
+              0.7487569024300904
+            ],
+            "n_records": 169,
+            "n_unique_participants": 156,
+            "at_risk_unique_participants_at_5y": 32,
+            "events_by_5y": 33
+          },
+          {
+            "predicted_survival_mean": 0.7809142381930521,
+            "observed_km_survival": 0.765201489749388,
+            "greenwood_95_ci": [
+              0.6484931158894465,
+              0.847587901442625
+            ],
+            "n_records": 168,
+            "n_unique_participants": 167,
+            "at_risk_unique_participants_at_5y": 34,
+            "events_by_5y": 20
+          },
+          {
+            "predicted_survival_mean": 0.8117457408361216,
+            "observed_km_survival": 0.7469433631492818,
+            "greenwood_95_ci": [
+              0.6260097316802113,
+              0.8338140693888583
+            ],
+            "n_records": 168,
+            "n_unique_participants": 168,
+            "at_risk_unique_participants_at_5y": 34,
+            "events_by_5y": 21
+          },
+          {
+            "predicted_survival_mean": 0.8344800646850201,
+            "observed_km_survival": 0.8741201660350606,
+            "greenwood_95_ci": [
+              0.778355010087423,
+              0.9303114662772511
+            ],
+            "n_records": 168,
+            "n_unique_participants": 167,
+            "at_risk_unique_participants_at_5y": 54,
+            "events_by_5y": 11
+          },
+          {
+            "predicted_survival_mean": 0.8571984058864635,
+            "observed_km_survival": 0.9115420757350269,
+            "greenwood_95_ci": [
+              0.8012945907120836,
+              0.96201788669546
+            ],
+            "n_records": 169,
+            "n_unique_participants": 167,
+            "at_risk_unique_participants_at_5y": 41,
+            "events_by_5y": 6
+          }
+        ]
+      },
+      "deepsurv": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 168,
+            "uno_c_index": 0.542532342515849,
+            "auc_1y": 0.368421052631579,
+            "auc_3y": 0.48534339950807526,
+            "auc_5y": 0.6406636935768064,
+            "weighted_mean_auc": 0.577216898652333,
+            "ibs": 0.07145080304627968
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "uno_c_index": 0.6839054850297084,
+            "auc_1y": 0.7086143948664636,
+            "auc_3y": 0.7305968849645307,
+            "auc_5y": 0.7729300565374967,
+            "weighted_mean_auc": 0.7382968746733275,
+            "ibs": 0.10789744085524608
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "uno_c_index": 0.4291834917688802,
+            "auc_1y": NaN,
+            "auc_3y": 0.6445519264778418,
+            "auc_5y": 0.5257449036254613,
+            "weighted_mean_auc": NaN,
+            "ibs": 0.08150114682806814
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "uno_c_index": 0.6493830804892473,
+            "auc_1y": 0.4212905801020188,
+            "auc_3y": 0.7118380013138005,
+            "auc_5y": 0.6333306379654915,
+            "weighted_mean_auc": 0.6577326613217664,
+            "ibs": 0.11936992043896537
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "uno_c_index": 0.7385994945999244,
+            "auc_1y": 0.6312052105720287,
+            "auc_3y": 0.6697927633556346,
+            "auc_5y": 0.7530305401517532,
+            "weighted_mean_auc": 0.7217490221635193,
+            "ibs": 0.0889398399272212
+          }
+        ],
+        "mean_uno_c_index": 0.6089233216566455,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.6485252858299404,
+        "mean_auc_5y": 0.6652065711758844,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.09385635052785903,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.714344599010673,
+            "observed_km_survival": 0.7675322297929781,
+            "greenwood_95_ci": [
+              0.6444918475837841,
+              0.8527008281032933
+            ],
+            "n_records": 169,
+            "n_unique_participants": 157,
+            "at_risk_unique_participants_at_5y": 35,
+            "events_by_5y": 18
+          },
+          {
+            "predicted_survival_mean": 0.783343283928733,
+            "observed_km_survival": 0.7456106031015005,
+            "greenwood_95_ci": [
+              0.639640146298041,
+              0.82460985587418
+            ],
+            "n_records": 168,
+            "n_unique_participants": 159,
+            "at_risk_unique_participants_at_5y": 42,
+            "events_by_5y": 24
+          },
+          {
+            "predicted_survival_mean": 0.7972288180653012,
+            "observed_km_survival": 0.7814522864143102,
+            "greenwood_95_ci": [
+              0.6719741913920719,
+              0.8581529562722574
+            ],
+            "n_records": 168,
+            "n_unique_participants": 166,
+            "at_risk_unique_participants_at_5y": 32,
+            "events_by_5y": 21
+          },
+          {
+            "predicted_survival_mean": 0.8059978731520462,
+            "observed_km_survival": 0.7828880349515445,
+            "greenwood_95_ci": [
+              0.6638792601664467,
+              0.8639455883877325
+            ],
+            "n_records": 168,
+            "n_unique_participants": 167,
+            "at_risk_unique_participants_at_5y": 40,
+            "events_by_5y": 17
+          },
+          {
+            "predicted_survival_mean": 0.8188956706457791,
+            "observed_km_survival": 0.8761594172092732,
+            "greenwood_95_ci": [
+              0.7756313613078183,
+              0.9335200201018913
+            ],
+            "n_records": 169,
+            "n_unique_participants": 168,
+            "at_risk_unique_participants_at_5y": 45,
+            "events_by_5y": 11
+          }
+        ]
+      }
+    }
+  },
+  "primary": {
+    "Clinical-only": {
+      "coxph": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.28342436109989066,
+            "auc_1y": 0.8264405371338897,
+            "auc_3y": 0.8323423159281512,
+            "auc_5y": 0.7654458068745832,
+            "weighted_mean_auc": 0.8018043571222435,
+            "ibs": 0.08832257615981498
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.40240012339219766,
+            "auc_1y": 0.8283067348068708,
+            "auc_3y": 0.7935801896855363,
+            "auc_5y": 0.6767780376561454,
+            "weighted_mean_auc": 0.7192767599910984,
+            "ibs": 0.04700307297286402
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.6948094388296805,
+            "auc_1y": 0.9219425493407094,
+            "auc_3y": 0.7898647315038216,
+            "auc_5y": 0.8155368759058389,
+            "weighted_mean_auc": 0.8214433573603177,
+            "ibs": 0.09120754894943983
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.6527986912170504,
+            "auc_1y": 0.9520709739332048,
+            "auc_3y": 0.7134039936066799,
+            "auc_5y": 0.7415724401233935,
+            "weighted_mean_auc": 0.7412222457051888,
+            "ibs": 0.09748195940997552
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.623892170691066,
+            "auc_1y": 0.9293318362780173,
+            "auc_3y": 0.7549243029929833,
+            "auc_5y": 0.661915662085495,
+            "weighted_mean_auc": 0.7231245879786654,
+            "ibs": 0.08245740766007052
+          }
+        ],
+        "mean_uno_c_index": 0.5309700680307541,
+        "mean_auc_1y": 0.891449904539147,
+        "mean_auc_3y": 0.7769179575205037,
+        "mean_auc_5y": 0.7322205313472967,
+        "mean_weighted_mean_auc": 0.7613720734344559,
+        "mean_ibs": 0.08125873432055347,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7730022273516765,
+            "observed_km_survival": 0.6814285745671722,
+            "greenwood_95_ci": [
+              0.5565080203864153,
+              0.7780001741180176
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 32,
+            "events_by_5y": 27
+          },
+          {
+            "predicted_survival_mean": 0.8148872523869619,
+            "observed_km_survival": 0.7925888360239017,
+            "greenwood_95_ci": [
+              0.6744249536824527,
+              0.8718158933414898
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 36,
+            "events_by_5y": 16
+          },
+          {
+            "predicted_survival_mean": 0.8244141793834605,
+            "observed_km_survival": 0.8301236049762187,
+            "greenwood_95_ci": [
+              0.7158295573022521,
+              0.9015092873966833
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 31,
+            "events_by_5y": 13
+          },
+          {
+            "predicted_survival_mean": 0.8329803679924851,
+            "observed_km_survival": 0.9152929329976829,
+            "greenwood_95_ci": [
+              0.8114249800217899,
+              0.9632032080949025
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 6
+          },
+          {
+            "predicted_survival_mean": 0.8438455286206071,
+            "observed_km_survival": 0.8437900093632821,
+            "greenwood_95_ci": [
+              0.7159368320638881,
+              0.9172880395691559
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 39,
+            "events_by_5y": 9
+          }
+        ]
+      },
+      "rsf": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.28176162257952453,
+            "auc_1y": 0.891201635659068,
+            "auc_3y": 0.7905477888671286,
+            "auc_5y": 0.750129679572673,
+            "weighted_mean_auc": 0.7833119300960036,
+            "ibs": 0.08113656374521268
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.4669887392384994,
+            "auc_1y": 0.888682388501158,
+            "auc_3y": 0.7799825622344887,
+            "auc_5y": 0.6949499415243465,
+            "weighted_mean_auc": 0.7369853531865437,
+            "ibs": 0.04337685360277302
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.6555201483362569,
+            "auc_1y": 0.9089361806923832,
+            "auc_3y": 0.7842772112210866,
+            "auc_5y": 0.8187609804901224,
+            "weighted_mean_auc": 0.8161927044416629,
+            "ibs": 0.08140937724601437
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.6681417660080842,
+            "auc_1y": 0.9059086448422913,
+            "auc_3y": 0.7180855071667669,
+            "auc_5y": 0.6796835477776046,
+            "weighted_mean_auc": 0.7091848758437761,
+            "ibs": 0.0923234780526459
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.5921226179320089,
+            "auc_1y": 0.8244441927239765,
+            "auc_3y": 0.7596879055804099,
+            "auc_5y": 0.6402423634657144,
+            "weighted_mean_auc": 0.7025092400588028,
+            "ibs": 0.07006972885386395
+          }
+        ],
+        "mean_uno_c_index": 0.5324908848611061,
+        "mean_auc_1y": 0.8838506384144744,
+        "mean_auc_3y": 0.766565404936645,
+        "mean_auc_5y": 0.7167684902510854,
+        "mean_weighted_mean_auc": 0.7496644108065019,
+        "mean_ibs": 0.07363326200187073,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.6601887480569811,
+            "observed_km_survival": 0.5814901744757447,
+            "greenwood_95_ci": [
+              0.4505698333343992,
+              0.6916367109403628
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 26,
+            "events_by_5y": 34
+          },
+          {
+            "predicted_survival_mean": 0.8022257897709483,
+            "observed_km_survival": 0.7902729143478706,
+            "greenwood_95_ci": [
+              0.6800996837445288,
+              0.8661393178204144
+            ],
+            "n_records": 154,
+            "n_unique_participants": 154,
+            "at_risk_unique_participants_at_5y": 37,
+            "events_by_5y": 18
+          },
+          {
+            "predicted_survival_mean": 0.8375865507308125,
+            "observed_km_survival": 0.9045563219320579,
+            "greenwood_95_ci": [
+              0.7889356038270985,
+              0.9584440787207043
+            ],
+            "n_records": 151,
+            "n_unique_participants": 151,
+            "at_risk_unique_participants_at_5y": 39,
+            "events_by_5y": 6
+          },
+          {
+            "predicted_survival_mean": 0.8568986862409141,
+            "observed_km_survival": 0.8455245100607638,
+            "greenwood_95_ci": [
+              0.7208108196180423,
+              0.9175895967938226
+            ],
+            "n_records": 151,
+            "n_unique_participants": 151,
+            "at_risk_unique_participants_at_5y": 35,
+            "events_by_5y": 10
+          },
+          {
+            "predicted_survival_mean": 0.8819818703517482,
+            "observed_km_survival": 0.9390952380952388,
+            "greenwood_95_ci": [
+              0.8170710745584384,
+              0.9806447583662689
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 39,
+            "events_by_5y": 3
+          }
+        ]
+      },
+      "deepsurv": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.27946545038294507,
+            "auc_1y": 0.9236665403124606,
+            "auc_3y": 0.8023871442134871,
+            "auc_5y": 0.765208855135719,
+            "weighted_mean_auc": 0.7988189585678406,
+            "ibs": 0.09071124106415183
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.40892399115106715,
+            "auc_1y": 0.8320802131627638,
+            "auc_3y": 0.7206565311409548,
+            "auc_5y": 0.6342694539553357,
+            "weighted_mean_auc": 0.6771064414444924,
+            "ibs": 0.04630412372480559
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.7522356132303639,
+            "auc_1y": 0.9214443993107502,
+            "auc_3y": 0.7865810632932903,
+            "auc_5y": 0.8140833055352173,
+            "weighted_mean_auc": 0.8190909470048441,
+            "ibs": 0.08479052252372477
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.6189149151191268,
+            "auc_1y": 0.9486136492207725,
+            "auc_3y": 0.7027415609984571,
+            "auc_5y": 0.715351558602038,
+            "weighted_mean_auc": 0.7230576143328958,
+            "ibs": 0.09282579787087128
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.5786061618261064,
+            "auc_1y": 0.9346298229396025,
+            "auc_3y": 0.7474902918319654,
+            "auc_5y": 0.634419300926317,
+            "weighted_mean_auc": 0.7062771205433213,
+            "ibs": 0.06966331550998975
+          }
+        ],
+        "mean_uno_c_index": 0.5271477709467122,
+        "mean_auc_1y": 0.9119971256500268,
+        "mean_auc_3y": 0.7519963852756352,
+        "mean_auc_5y": 0.7126325648039296,
+        "mean_weighted_mean_auc": 0.7448520864144466,
+        "mean_ibs": 0.07683708066956368,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7068288733378881,
+            "observed_km_survival": 0.5899147892167003,
+            "greenwood_95_ci": [
+              0.4533884994110005,
+              0.7031781766538097
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 22,
+            "events_by_5y": 31
+          },
+          {
+            "predicted_survival_mean": 0.7923076775534782,
+            "observed_km_survival": 0.8202122902538838,
+            "greenwood_95_ci": [
+              0.7095153063764404,
+              0.8918463233183737
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 37,
+            "events_by_5y": 15
+          },
+          {
+            "predicted_survival_mean": 0.8197649113332451,
+            "observed_km_survival": 0.8388982688407655,
+            "greenwood_95_ci": [
+              0.72809062338861,
+              0.9073343892945748
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 44,
+            "events_by_5y": 12
+          },
+          {
+            "predicted_survival_mean": 0.8435839902278135,
+            "observed_km_survival": 0.9120837779547883,
+            "greenwood_95_ci": [
+              0.8149010079480408,
+              0.959472450807988
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 42,
+            "events_by_5y": 7
+          },
+          {
+            "predicted_survival_mean": 0.8920144587954522,
+            "observed_km_survival": 0.8833233903760221,
+            "greenwood_95_ci": [
+              0.7396084507445138,
+              0.9502518907314561
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 31,
+            "events_by_5y": 6
+          }
+        ]
+      }
+    },
+    "Full": {
+      "coxph": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.26611520415564355,
+            "auc_1y": 0.902704947694432,
+            "auc_3y": 0.7072379164567777,
+            "auc_5y": 0.6515833617274633,
+            "weighted_mean_auc": 0.7033939565553657,
+            "ibs": 0.09258094437884798
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.6425247016023758,
+            "auc_1y": 0.6409660041385885,
+            "auc_3y": 0.6985421393021829,
+            "auc_5y": 0.7171142653874669,
+            "weighted_mean_auc": 0.7034326319587193,
+            "ibs": 0.05002015641456022
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.5558640004188823,
+            "auc_1y": 0.6625055138594114,
+            "auc_3y": 0.6774230346448882,
+            "auc_5y": 0.6889882133870752,
+            "weighted_mean_auc": 0.6768338614493478,
+            "ibs": 0.09539961637800902
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.6676603820259045,
+            "auc_1y": 0.7661874452689846,
+            "auc_3y": 0.7087444453475179,
+            "auc_5y": 0.6908406060254879,
+            "weighted_mean_auc": 0.7028910934107873,
+            "ibs": 0.10196336029363327
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.44213383897378833,
+            "auc_1y": 0.6981456434491486,
+            "auc_3y": 0.5191012296481472,
+            "auc_5y": 0.38995622674962704,
+            "weighted_mean_auc": 0.4684683766753052,
+            "ibs": 0.07650352287047603
+          }
+        ],
+        "mean_uno_c_index": 0.5147007286569559,
+        "mean_auc_1y": 0.7342009491105498,
+        "mean_auc_3y": 0.6623165254547048,
+        "mean_auc_5y": 0.6278452283008362,
+        "mean_weighted_mean_auc": 0.6511415412546482,
+        "mean_ibs": 0.08326204245642184,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7956615606457916,
+            "observed_km_survival": 0.8933315831864159,
+            "greenwood_95_ci": [
+              0.7879612163540886,
+              0.948009872954486
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 43,
+            "events_by_5y": 8
+          },
+          {
+            "predicted_survival_mean": 0.8141179369331519,
+            "observed_km_survival": 0.8171321534164703,
+            "greenwood_95_ci": [
+              0.7059828144319951,
+              0.8894565187797713
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 34,
+            "events_by_5y": 15
+          },
+          {
+            "predicted_survival_mean": 0.8183770223140873,
+            "observed_km_survival": 0.7984436693732293,
+            "greenwood_95_ci": [
+              0.6686624988450933,
+              0.881715745759812
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 32,
+            "events_by_5y": 14
+          },
+          {
+            "predicted_survival_mean": 0.818887665839628,
+            "observed_km_survival": 0.7969533209752883,
+            "greenwood_95_ci": [
+              0.6711076046138507,
+              0.8788374706149317
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 30,
+            "events_by_5y": 16
+          },
+          {
+            "predicted_survival_mean": 0.8314565402301222,
+            "observed_km_survival": 0.7659572225869739,
+            "greenwood_95_ci": [
+              0.645665755384612,
+              0.8500130078712914
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 37,
+            "events_by_5y": 18
+          }
+        ]
+      },
+      "rsf": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.2516392892160576,
+            "auc_1y": 0.7298972679047065,
+            "auc_3y": 0.6736497877597429,
+            "auc_5y": 0.6620019055281592,
+            "weighted_mean_auc": 0.6744958178264939,
+            "ibs": 0.09186949039322824
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.6359154143801716,
+            "auc_1y": 0.8187566813691485,
+            "auc_3y": 0.8083687206482747,
+            "auc_5y": 0.45795527191746116,
+            "weighted_mean_auc": 0.5729778220853986,
+            "ibs": 0.05013693831101692
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.5686335125643109,
+            "auc_1y": 0.43783965277674086,
+            "auc_3y": 0.7383702277694283,
+            "auc_5y": 0.7534395046732004,
+            "weighted_mean_auc": 0.6816422417424342,
+            "ibs": 0.09388965757282633
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.6527137528412913,
+            "auc_1y": 0.8013692463079546,
+            "auc_3y": 0.5860562232051145,
+            "auc_5y": 0.6648023237469464,
+            "weighted_mean_auc": 0.6382666180706548,
+            "ibs": 0.10089576082166199
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.4594037325950737,
+            "auc_1y": 0.4553620314840678,
+            "auc_3y": 0.51746661297518,
+            "auc_5y": 0.6084199773210774,
+            "weighted_mean_auc": 0.5596929849738973,
+            "ibs": 0.07675537021316998
+          }
+        ],
+        "mean_uno_c_index": 0.5134777183022649,
+        "mean_auc_1y": 0.6489748499807766,
+        "mean_auc_3y": 0.6649823851795074,
+        "mean_auc_5y": 0.6291417882176457,
+        "mean_weighted_mean_auc": 0.6254106920133089,
+        "mean_ibs": 0.08267871845159261,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7725300973505458,
+            "observed_km_survival": 0.7959807087482516,
+            "greenwood_95_ci": [
+              0.6796884774475901,
+              0.8738517654017204
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 35,
+            "events_by_5y": 17
+          },
+          {
+            "predicted_survival_mean": 0.8064131992078886,
+            "observed_km_survival": 0.6667971760987561,
+            "greenwood_95_ci": [
+              0.5267269966713704,
+              0.7739866966945627
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 28,
+            "events_by_5y": 22
+          },
+          {
+            "predicted_survival_mean": 0.8206964068483383,
+            "observed_km_survival": 0.8542823319763925,
+            "greenwood_95_ci": [
+              0.7466414362349857,
+              0.9186073972832348
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 37,
+            "events_by_5y": 13
+          },
+          {
+            "predicted_survival_mean": 0.8311292816416316,
+            "observed_km_survival": 0.7906291474347303,
+            "greenwood_95_ci": [
+              0.6669158470626142,
+              0.8726316784288031
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 15
+          },
+          {
+            "predicted_survival_mean": 0.8430797596809259,
+            "observed_km_survival": 0.9579606672962437,
+            "greenwood_95_ci": [
+              0.8891122647114672,
+              0.9844282148759976
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 4
+          }
+        ]
+      },
+      "deepsurv": {
+        "folds": [
+          {
+            "fold": 1,
+            "n": 153,
+            "uno_c_index": 0.1836792636446,
+            "auc_1y": 0.6060613043429204,
+            "auc_3y": 0.6420821527242,
+            "auc_5y": 0.510007584809337,
+            "weighted_mean_auc": 0.5791684206388095,
+            "ibs": 0.09281958798443708
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "uno_c_index": 0.5090732187016435,
+            "auc_1y": 0.8483909561647106,
+            "auc_3y": 0.5648040734074165,
+            "auc_5y": 0.41307405935546254,
+            "weighted_mean_auc": 0.5000027047912504,
+            "ibs": 0.05060266401451919
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "uno_c_index": 0.44666465113180465,
+            "auc_1y": 0.3588289092928742,
+            "auc_3y": 0.5546600389047778,
+            "auc_5y": 0.5312356050466123,
+            "weighted_mean_auc": 0.5108520223705502,
+            "ibs": 0.09532169587857066
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "uno_c_index": 0.528913437251403,
+            "auc_1y": 0.8080556880148269,
+            "auc_3y": 0.4448420256518787,
+            "auc_5y": 0.5260138032430218,
+            "weighted_mean_auc": 0.5066501325452645,
+            "ibs": 0.10202434369397012
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "uno_c_index": 0.4679931328737938,
+            "auc_1y": 0.2362641448797738,
+            "auc_3y": 0.5682131578801338,
+            "auc_5y": 0.5892342668625787,
+            "weighted_mean_auc": 0.5453799035145002,
+            "ibs": 0.07647054510503624
+          }
+        ],
+        "mean_uno_c_index": 0.4270524349475583,
+        "mean_auc_1y": 0.5719288775198998,
+        "mean_auc_3y": 0.5550476462054192,
+        "mean_auc_5y": 0.5137756039112213,
+        "mean_weighted_mean_auc": 0.5284399672863609,
+        "mean_ibs": 0.08341696250240421,
+        "calibration_5year_groups": [
+          {
+            "predicted_survival_mean": 0.7908703436607967,
+            "observed_km_survival": 0.8768149356663231,
+            "greenwood_95_ci": [
+              0.7639993685311435,
+              0.9378185837680518
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 38,
+            "events_by_5y": 9
+          },
+          {
+            "predicted_survival_mean": 0.8129624964530173,
+            "observed_km_survival": 0.8103439523662611,
+            "greenwood_95_ci": [
+              0.7006740977857477,
+              0.8830911311817672
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 35,
+            "events_by_5y": 16
+          },
+          {
+            "predicted_survival_mean": 0.8247735705946013,
+            "observed_km_survival": 0.7660036744081735,
+            "greenwood_95_ci": [
+              0.6432763053661494,
+              0.8512370129075096
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 37,
+            "events_by_5y": 17
+          },
+          {
+            "predicted_survival_mean": 0.8277207723275053,
+            "observed_km_survival": 0.8124008306289993,
+            "greenwood_95_ci": [
+              0.6889808457231966,
+              0.8905948387307141
+            ],
+            "n_records": 152,
+            "n_unique_participants": 152,
+            "at_risk_unique_participants_at_5y": 33,
+            "events_by_5y": 14
+          },
+          {
+            "predicted_survival_mean": 0.8325810898539666,
+            "observed_km_survival": 0.8148954044287186,
+            "greenwood_95_ci": [
+              0.6943243443351723,
+              0.8914971054874639
+            ],
+            "n_records": 153,
+            "n_unique_participants": 153,
+            "at_risk_unique_participants_at_5y": 33,
+            "events_by_5y": 15
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "scope_note": "Completed nested full-omics tuner telemetry plus clinical-only outer design audits.",
+  "rare_source_categories_n_lt_10": {
+    "gender.demographic": {},
+    "race.demographic": {
+      "american indian or alaska native": 1
+    },
+    "ethnicity.demographic": {},
+    "ajcc_pathologic_stage.diagnoses": {
+      "Stage IB": 7,
+      "Stage II": 6,
+      "Stage III": 2
+    }
+  },
+  "clinical_only_coxnet_sensitivity": {
+    "mixed": {
+      "l1_ratio": 0.5,
+      "alpha": 0.01,
+      "fold_cindices": [
+        0.6723735408560312,
+        0.7526835551738944,
+        0.7199275362318841,
+        0.7986735130509199,
+        0.7497123130034522
+      ],
+      "mean": 0.7386740916632364,
+      "sample_sd": 0.04654362024743143
+    },
+    "primary": {
+      "l1_ratio": 0.5,
+      "alpha": 0.01,
+      "fold_cindices": [
+        0.8230717185385656,
+        0.6186813186813187,
+        0.8103693181818182,
+        0.7371883656509696,
+        0.80375
+      ],
+      "mean": 0.7586121442105345,
+      "sample_sd": 0.0850160014737996
+    }
+  },
+  "mixed": {
+    "full_omics_nested_tuning": {
+      "outer_fits": [
+        {
+          "fold": 1,
+          "selected_penalizer": 1.0,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 2,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 3,
+          "selected_penalizer": 1.0,
+          "warning": false,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 4,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 5,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        }
+      ],
+      "inner_plus_outer_warning_counts_by_penalizer": {
+        "0.01": 3,
+        "0.05": 4,
+        "0.1": 6,
+        "0.5": 12,
+        "1.0": 6
+      },
+      "inner_fit_level_limitation": "The original run aggregated warning counts by penalizer and did not persist inner fold IDs or iteration counts."
+    },
+    "clinical_only_design": [
+      {
+        "fold": 1,
+        "n_rows": 674,
+        "n_columns": 15,
+        "matrix_rank": 12,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0000000000000002
+          ]
+        ]
+      },
+      {
+        "fold": 2,
+        "n_rows": 674,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0000000000000002
+          ]
+        ]
+      },
+      {
+        "fold": 3,
+        "n_rows": 674,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0000000000000002
+          ]
+        ]
+      },
+      {
+        "fold": 4,
+        "n_rows": 673,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0000000000000002
+          ]
+        ]
+      },
+      {
+        "fold": 5,
+        "n_rows": 673,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            0.9999999999999998
+          ]
+        ]
+      }
+    ]
+  },
+  "primary": {
+    "full_omics_nested_tuning": {
+      "outer_fits": [
+        {
+          "fold": 1,
+          "selected_penalizer": 1.0,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 2,
+          "selected_penalizer": 1.0,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 3,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 4,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        },
+        {
+          "fold": 5,
+          "selected_penalizer": 0.5,
+          "warning": true,
+          "iterations": null,
+          "iterations_note": "not retained by lifelines run"
+        }
+      ],
+      "inner_plus_outer_warning_counts_by_penalizer": {
+        "0.01": 2,
+        "0.05": 8,
+        "0.1": 5,
+        "0.5": 13,
+        "1.0": 6
+      },
+      "inner_fit_level_limitation": "The original run aggregated warning counts by penalizer and did not persist inner fold IDs or iteration counts."
+    },
+    "clinical_only_design": [
+      {
+        "fold": 1,
+        "n_rows": 609,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            0.9999999999999999
+          ]
+        ]
+      },
+      {
+        "fold": 2,
+        "n_rows": 609,
+        "n_columns": 15,
+        "matrix_rank": 12,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0000000000000002
+          ]
+        ]
+      },
+      {
+        "fold": 3,
+        "n_rows": 610,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0
+          ]
+        ]
+      },
+      {
+        "fold": 4,
+        "n_rows": 610,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            1.0
+          ]
+        ]
+      },
+      {
+        "fold": 5,
+        "n_rows": 610,
+        "n_columns": 16,
+        "matrix_rank": 13,
+        "rank_deficient": true,
+        "high_correlation_pairs_abs_r_gt_0_95": [
+          [
+            "clin_categorical__gender.demographic_female",
+            "clin_categorical__gender.demographic_male",
+            0.9999999999999999
+          ]
+        ]
+      }
+    ]
+  }
+}

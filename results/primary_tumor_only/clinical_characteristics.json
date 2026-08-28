@@ -1,0 +1,136 @@
+{
+  "mixed": {
+    "analysis_unit": "record/sample key",
+    "n": 842,
+    "unique_participants": 769,
+    "age_years": {
+      "nonmissing_n": 842,
+      "missing_n": 0,
+      "missing_percent": 0.0,
+      "mean": 57.72209026128266,
+      "median": 58.0,
+      "q1": 48.0,
+      "q3": 66.75
+    },
+    "categorical": {
+      "AJCC stage": {
+        "source_column": "ajcc_pathologic_stage.diagnoses",
+        "missing_n": 6,
+        "missing_percent": 0.7125890736342043,
+        "levels": {
+          "Stage IIA": 263,
+          "Stage IIB": 204,
+          "Stage IIIA": 135,
+          "Stage I": 66,
+          "Stage IA": 65,
+          "Stage IIIC": 54,
+          "Stage IIIB": 20,
+          "Stage IV": 12,
+          "Stage II": 6,
+          "Stage X": 5,
+          "Stage IB": 4,
+          "Stage III": 2
+        }
+      },
+      "Gender": {
+        "source_column": "gender.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "female": 833,
+          "male": 9
+        }
+      },
+      "Race": {
+        "source_column": "race.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "white": 627,
+          "black or african american": 162,
+          "asian": 37,
+          "not reported": 15,
+          "american indian or alaska native": 1
+        }
+      },
+      "Ethnicity": {
+        "source_column": "ethnicity.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "not hispanic or latino": 720,
+          "not reported": 84,
+          "hispanic or latino": 38
+        }
+      }
+    },
+    "receptor_or_molecular_subtype_columns_found": []
+  },
+  "primary": {
+    "analysis_unit": "unique participant",
+    "n": 762,
+    "unique_participants": 762,
+    "age_years": {
+      "nonmissing_n": 762,
+      "missing_n": 0,
+      "missing_percent": 0.0,
+      "mean": 57.821522309711284,
+      "median": 58.0,
+      "q1": 48.0,
+      "q3": 67.0
+    },
+    "categorical": {
+      "AJCC stage": {
+        "source_column": "ajcc_pathologic_stage.diagnoses",
+        "missing_n": 5,
+        "missing_percent": 0.6561679790026247,
+        "levels": {
+          "Stage IIA": 238,
+          "Stage IIB": 180,
+          "Stage IIIA": 122,
+          "Stage IA": 62,
+          "Stage I": 59,
+          "Stage IIIC": 51,
+          "Stage IIIB": 17,
+          "Stage IV": 11,
+          "Stage II": 6,
+          "Stage X": 5,
+          "Stage IB": 4,
+          "Stage III": 2
+        }
+      },
+      "Gender": {
+        "source_column": "gender.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "female": 753,
+          "male": 9
+        }
+      },
+      "Race": {
+        "source_column": "race.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "white": 552,
+          "black or african american": 158,
+          "asian": 37,
+          "not reported": 14,
+          "american indian or alaska native": 1
+        }
+      },
+      "Ethnicity": {
+        "source_column": "ethnicity.demographic",
+        "missing_n": 0,
+        "missing_percent": 0.0,
+        "levels": {
+          "not hispanic or latino": 657,
+          "not reported": 67,
+          "hispanic or latino": 38
+        }
+      }
+    },
+    "receptor_or_molecular_subtype_columns_found": []
+  }
+}

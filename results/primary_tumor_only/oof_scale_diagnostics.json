@@ -1,0 +1,237 @@
+{
+  "mixed": {
+    "source": "phase1_oof_predictions.parquet",
+    "n_rows": 842,
+    "scores": {
+      "coxph": {
+        "definition": "lifelines predict_partial_hazard (partial hazard)",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 168,
+            "mean": 33.294518766606494,
+            "sample_variance": 71847.08816545026
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "mean": 4613.674777521175,
+            "sample_variance": 3569982159.4662733
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "mean": 33.38856128333034,
+            "sample_variance": 83177.63495792162
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "mean": 2.2229510140477426,
+            "sample_variance": 17.74381053762658
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "mean": 1060.0631022713876,
+            "sample_variance": 188879080.67330298
+          }
+        ],
+        "pooled_c_index_uncentered": 0.6411477013368112,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.5400717313335507
+      },
+      "rsf": {
+        "definition": "scikit-survival RandomSurvivalForest.predict risk score",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 168,
+            "mean": 18.878121104593692,
+            "sample_variance": 144.71961681794247
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "mean": 19.1031348141559,
+            "sample_variance": 90.18412510778963
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "mean": 16.61962566473186,
+            "sample_variance": 90.6477610846832
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "mean": 16.770001306080196,
+            "sample_variance": 89.4499125571923
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "mean": 17.408051081612214,
+            "sample_variance": 96.02688040592723
+          }
+        ],
+        "pooled_c_index_uncentered": 0.6788392566025432,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.6806868818606673
+      },
+      "deepsurv": {
+        "definition": "raw neural-network scalar output (log-risk)",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 168,
+            "mean": 0.0795726281856852,
+            "sample_variance": 0.010112180967788143
+          },
+          {
+            "fold": 2,
+            "n": 168,
+            "mean": 0.6436978321345079,
+            "sample_variance": 1.4356497552266014
+          },
+          {
+            "fold": 3,
+            "n": 168,
+            "mean": -0.15986660757057725,
+            "sample_variance": 1.8388692675597191
+          },
+          {
+            "fold": 4,
+            "n": 169,
+            "mean": 0.8431728132642232,
+            "sample_variance": 0.8246122056016001
+          },
+          {
+            "fold": 5,
+            "n": 169,
+            "mean": -0.2633692050606189,
+            "sample_variance": 0.2821839222578079
+          }
+        ],
+        "pooled_c_index_uncentered": 0.6432344310401044,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.6411259645690686
+      }
+    }
+  },
+  "primary": {
+    "source": "phase1_oof_predictions_primary.parquet",
+    "n_rows": 762,
+    "scores": {
+      "coxph": {
+        "definition": "lifelines predict_partial_hazard (partial hazard)",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 153,
+            "mean": 641.706865326109,
+            "sample_variance": 60345017.061176516
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "mean": 225.3313262508023,
+            "sample_variance": 6774531.053631741
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "mean": 44.326056341609714,
+            "sample_variance": 148949.90214295665
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "mean": 1288281.9647163074,
+            "sample_variance": 136686335022564.53
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "mean": 5.458938093022604,
+            "sample_variance": 370.4300443323084
+          }
+        ],
+        "pooled_c_index_uncentered": 0.6713727661406909,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.5509519854818369
+      },
+      "rsf": {
+        "definition": "scikit-survival RandomSurvivalForest.predict risk score",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 153,
+            "mean": 15.669331805719771,
+            "sample_variance": 73.0803879131428
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "mean": 14.154510447877138,
+            "sample_variance": 78.27849664155889
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "mean": 15.20058286724704,
+            "sample_variance": 67.41658640510848
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "mean": 17.681277376661402,
+            "sample_variance": 78.379668342092
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "mean": 14.596619836508886,
+            "sample_variance": 78.42817753741794
+          }
+        ],
+        "pooled_c_index_uncentered": 0.6495955215157947,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.6467349512472702
+      },
+      "deepsurv": {
+        "definition": "raw neural-network scalar output (log-risk)",
+        "fold_statistics": [
+          {
+            "fold": 1,
+            "n": 153,
+            "mean": 0.19529121417820064,
+            "sample_variance": 0.007167748667887672
+          },
+          {
+            "fold": 2,
+            "n": 153,
+            "mean": -0.11443022653168324,
+            "sample_variance": 0.05866229293074695
+          },
+          {
+            "fold": 3,
+            "n": 152,
+            "mean": 0.04220593710871119,
+            "sample_variance": 0.8105765344331961
+          },
+          {
+            "fold": 4,
+            "n": 152,
+            "mean": 1.4709474506640905,
+            "sample_variance": 5.397126694453295
+          },
+          {
+            "fold": 5,
+            "n": 152,
+            "mean": -0.21509678573592714,
+            "sample_variance": 0.3550873731000774
+          }
+        ],
+        "pooled_c_index_uncentered": 0.5766663590784658,
+        "pooled_c_index_test_fold_mean_centered_diagnostic_only": 0.5747593122327828
+      }
+    }
+  },
+  "methodological_note": "The completed OOF files do not store training-fold risk means. Therefore a leakage-safe training-mean-centered pooled C-index cannot be reconstructed and is not fabricated here. The supplied centered value subtracts each held-out fold's own mean and is labelled diagnostic-only; it must not be used as a performance estimate. Future model fits must persist the training-risk mean and subtract that constant from their held-out risks."
+}
