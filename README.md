@@ -40,7 +40,7 @@ Global split seed is 42. Model-specific seeds and fold participant hashes are re
 
 ## Traceability
 
-See [`docs/manuscript_table_mapping.md`](docs/manuscript_table_mapping.md). The manuscript file itself was unavailable during assembly, so labels not explicitly supplied by the author are marked for author verification.
+See [`docs/manuscript_table_mapping.md`](docs/manuscript_table_mapping.md) for the complete final-order mapping of every manuscript table and supplementary figure to its producing code and retained output.
 
 ## Known limitations
 
