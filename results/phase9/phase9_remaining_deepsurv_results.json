@@ -1,0 +1,1020 @@
+{
+  "generation_date": "2026-08-29",
+  "git_provenance": "commit containing this report; hash reported in delivery",
+  "method": {
+    "source": "Phase 7 internal-train-only cached preprocessing/selection",
+    "outer_seed": 42,
+    "internal_seed_schema": "4200 + outer_fold",
+    "training_seed_schema": "42 + outer_fold",
+    "epochs": 300,
+    "patience": 30,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.3,
+    "configurations": [
+      "RNA-seq only",
+      "Methylation only",
+      "miRNA only",
+      "Clinical + RNA-seq",
+      "Clinical + RNA-seq + Methylation",
+      "Clinical + RNA-seq + miRNA",
+      "Clinical + Methylation",
+      "Clinical + miRNA"
+    ]
+  },
+  "fits_requested": 80,
+  "fits_completed": 75,
+  "fits_skipped": 5,
+  "ablation_comparison": {
+    "mixed": {
+      "RNA-seq only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.4544747081712062,
+            "corrected_cindex": 0.6132295719844358,
+            "difference": 0.15875486381322962
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6603692571919278,
+            "corrected_cindex": 0.6672391584370975,
+            "difference": 0.006869901245169618
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.5927536231884057,
+            "corrected_cindex": 0.5739130434782609,
+            "difference": -0.018840579710144856
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.581086863500214,
+            "corrected_cindex": 0.5738125802310655,
+            "difference": -0.007274283269148474
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.6478711162255466,
+            "corrected_cindex": 0.5845799769850403,
+            "difference": -0.06329113924050633
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5873111136554601,
+        "old_sample_sd": 0.08172955259615766,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.60255486622318,
+        "corrected_sample_sd": 0.039584014007020905
+      },
+      "Methylation only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5276264591439689,
+            "corrected_cindex": null,
+            "difference": null
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6547874624302276,
+            "corrected_cindex": null,
+            "difference": null
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.5630434782608695,
+            "corrected_cindex": 0.5847826086956521,
+            "difference": 0.021739130434782594
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.5960633290543432,
+            "corrected_cindex": 0.6230209670517758,
+            "difference": 0.02695763799743256
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5627157652474108,
+            "corrected_cindex": 0.5368239355581128,
+            "difference": -0.02589182968929804
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5808472988273641,
+        "old_sample_sd": 0.04789796885781567,
+        "corrected_n_folds": 3,
+        "corrected_mean": 0.5815425037685136,
+        "corrected_sample_sd": 0.04318976463855797
+      },
+      "miRNA only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5618677042801556,
+            "corrected_cindex": 0.4575875486381323,
+            "difference": -0.10428015564202336
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6393301846285959,
+            "corrected_cindex": 0.5860884499785316,
+            "difference": -0.05324173465006432
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.5014492753623189,
+            "corrected_cindex": 0.3760869565217391,
+            "difference": -0.12536231884057975
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.5618314077877621,
+            "corrected_cindex": 0.5169020111253744,
+            "difference": -0.04492939666238771
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.4789988492520138,
+            "corrected_cindex": 0.6852704257767549,
+            "difference": 0.2062715765247411
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5486954842621692,
+        "old_sample_sd": 0.06255104708302558,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5243870784081064,
+        "corrected_sample_sd": 0.11853442566976162
+      },
+      "Clinical + RNA-seq": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.4311284046692607,
+            "corrected_cindex": 0.4287937743190661,
+            "difference": -0.0023346303501945997
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.690854443967368,
+            "corrected_cindex": 0.6607986260197509,
+            "difference": -0.030055817947617025
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.6210144927536232,
+            "corrected_cindex": 0.5760869565217391,
+            "difference": -0.04492753623188406
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.6157466837826273,
+            "corrected_cindex": 0.6183140778776208,
+            "difference": 0.0025673940949935137
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.6680092059838896,
+            "corrected_cindex": 0.6334867663981588,
+            "difference": -0.03452243958573076
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6053506462313537,
+        "old_sample_sd": 0.10240094930847116,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5834960402272671,
+        "corrected_sample_sd": 0.09175339750876543
+      },
+      "Clinical + RNA-seq + Methylation": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.511284046692607,
+            "corrected_cindex": 0.4287937743190661,
+            "difference": -0.08249027237354084
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.7015886646629454,
+            "corrected_cindex": 0.6607986260197509,
+            "difference": -0.040790038643194526
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.6434782608695652,
+            "corrected_cindex": 0.5268115942028986,
+            "difference": -0.11666666666666659
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.6067608044501498,
+            "corrected_cindex": 0.6302952503209243,
+            "difference": 0.023534445870774467
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.6691599539700805,
+            "corrected_cindex": 0.5960874568469505,
+            "difference": -0.07307249712313002
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6264543461290696,
+        "old_sample_sd": 0.07316211774520953,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5685573403419181,
+        "corrected_sample_sd": 0.09267482578211796
+      },
+      "Clinical + RNA-seq + miRNA": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5603112840466926,
+            "corrected_cindex": 0.5789883268482491,
+            "difference": 0.018677042801556465
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6869901245169601,
+            "corrected_cindex": 0.69944182052383,
+            "difference": 0.012451696006869906
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.6405797101449275,
+            "corrected_cindex": 0.5550724637681159,
+            "difference": -0.08550724637681162
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.7115960633290543,
+            "corrected_cindex": 0.6187419768934531,
+            "difference": -0.09285408643560122
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.6783659378596087,
+            "corrected_cindex": 0.6484464902186421,
+            "difference": -0.029919447640966657
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6555686239794486,
+        "old_sample_sd": 0.05904390426889226,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.620138215650458,
+        "corrected_sample_sd": 0.05705093131153695
+      },
+      "Clinical + Methylation": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.6785992217898833,
+            "corrected_cindex": 0.6832684824902724,
+            "difference": 0.0046692607003890885
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6925719192786604,
+            "corrected_cindex": 0.7052382996994419,
+            "difference": 0.012666380420781498
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.49927536231884057,
+            "corrected_cindex": 0.6326086956521739,
+            "difference": 0.13333333333333336
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.6067608044501498,
+            "corrected_cindex": 0.6063329054343175,
+            "difference": -0.0004278990158322893
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.6288837744533947,
+            "corrected_cindex": 0.5132336018411968,
+            "difference": -0.1156501726121979
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6212182164581858,
+        "old_sample_sd": 0.07668403989107925,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.6281363970234806,
+        "corrected_sample_sd": 0.07530321421655223
+      },
+      "Clinical + miRNA": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5937743190661479,
+            "corrected_cindex": 0.6007782101167315,
+            "difference": 0.007003891050583633
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6423357664233577,
+            "corrected_cindex": 0.5551738943752683,
+            "difference": -0.08716187204808934
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.6666666666666666,
+            "corrected_cindex": 0.6731884057971015,
+            "difference": 0.006521739130434856
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.5802310654685494,
+            "corrected_cindex": 0.7967479674796748,
+            "difference": 0.2165169020111254
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.7704257767548907,
+            "corrected_cindex": 0.7042577675489068,
+            "difference": -0.06616800920598387
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6506867188759224,
+        "old_sample_sd": 0.07560681098480863,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.6660292490635367,
+        "corrected_sample_sd": 0.09373721811769713
+      }
+    },
+    "primary": {
+      "RNA-seq only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.520297699594046,
+            "corrected_cindex": 0.46075778078484436,
+            "difference": -0.059539918809201675
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6472527472527473,
+            "corrected_cindex": 0.4582417582417582,
+            "difference": -0.18901098901098906
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.4225852272727273,
+            "corrected_cindex": 0.4950284090909091,
+            "difference": 0.07244318181818182
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.47229916897506924,
+            "corrected_cindex": 0.546398891966759,
+            "difference": 0.07409972299168971
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.44166666666666665,
+            "corrected_cindex": 0.7025,
+            "difference": 0.26083333333333336
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5008203019522514,
+        "old_sample_sd": 0.08979861435385864,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5325853680168542,
+        "corrected_sample_sd": 0.1014377831131124
+      },
+      "Methylation only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": null,
+            "corrected_cindex": 0.4993234100135318,
+            "difference": null
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.521978021978022,
+            "corrected_cindex": null,
+            "difference": null
+          },
+          {
+            "fold": 3,
+            "old_cindex": null,
+            "corrected_cindex": null,
+            "difference": null
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.639196675900277,
+            "corrected_cindex": null,
+            "difference": null
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5308333333333334,
+            "corrected_cindex": 0.44916666666666666,
+            "difference": -0.08166666666666672
+          }
+        ],
+        "old_n_folds": 3,
+        "old_mean": 0.5640026770705441,
+        "old_sample_sd": 0.06527026298249666,
+        "corrected_n_folds": 2,
+        "corrected_mean": 0.47424503834009923,
+        "corrected_sample_sd": 0.0354661733428016
+      },
+      "miRNA only": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5,
+            "corrected_cindex": 0.6041948579161028,
+            "difference": 0.10419485791610283
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.42857142857142855,
+            "corrected_cindex": 0.4543956043956044,
+            "difference": 0.025824175824175843
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.4928977272727273,
+            "corrected_cindex": 0.4435369318181818,
+            "difference": -0.04936079545454547
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.5,
+            "corrected_cindex": 0.5055401662049861,
+            "difference": 0.005540166204986097
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5445833333333333,
+            "corrected_cindex": 0.4975,
+            "difference": -0.04708333333333331
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.4932104978354978,
+        "old_sample_sd": 0.04156221242643763,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.501033512066975,
+        "corrected_sample_sd": 0.06355314722482215
+      },
+      "Clinical + RNA-seq": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5480378890392422,
+            "corrected_cindex": 0.5602165087956699,
+            "difference": 0.012178619756427644
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.7076923076923077,
+            "corrected_cindex": 0.5076923076923077,
+            "difference": -0.20000000000000007
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.5632102272727273,
+            "corrected_cindex": 0.578125,
+            "difference": 0.014914772727272707
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.47991689750692523,
+            "corrected_cindex": 0.6177285318559557,
+            "difference": 0.13781163434903043
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5329166666666667,
+            "corrected_cindex": 0.7191666666666666,
+            "difference": 0.18624999999999992
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5663547976355738,
+        "old_sample_sd": 0.08501662836421271,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5965858030021199,
+        "corrected_sample_sd": 0.07911805014831795
+      },
+      "Clinical + RNA-seq + Methylation": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5480378890392422,
+            "corrected_cindex": 0.5784844384303113,
+            "difference": 0.030446549391069055
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.6208791208791209,
+            "corrected_cindex": 0.5076923076923077,
+            "difference": -0.11318681318681323
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.5632102272727273,
+            "corrected_cindex": 0.578125,
+            "difference": 0.014914772727272707
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.590027700831025,
+            "corrected_cindex": 0.6177285318559557,
+            "difference": 0.027700831024930705
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5025,
+            "corrected_cindex": 0.5425,
+            "difference": 0.040000000000000036
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5649309876044231,
+        "old_sample_sd": 0.04457018240992887,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5649060555957149,
+        "corrected_sample_sd": 0.04160760521329918
+      },
+      "Clinical + RNA-seq + miRNA": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.5947225981055481,
+            "corrected_cindex": 0.5595399188092016,
+            "difference": -0.03518267929634644
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.5362637362637362,
+            "corrected_cindex": 0.4857142857142857,
+            "difference": -0.050549450549450536
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.47017045454545453,
+            "corrected_cindex": 0.5426136363636364,
+            "difference": 0.07244318181818182
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.4487534626038781,
+            "corrected_cindex": 0.5457063711911357,
+            "difference": 0.09695290858725764
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5208333333333334,
+            "corrected_cindex": 0.505,
+            "difference": -0.015833333333333366
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.5141487169703901,
+        "old_sample_sd": 0.05752507139288197,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5277148424156518,
+        "corrected_sample_sd": 0.030977877128006252
+      },
+      "Clinical + Methylation": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.8247631935047361,
+            "corrected_cindex": 0.8017591339648173,
+            "difference": -0.023004059539918797
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.5802197802197803,
+            "corrected_cindex": 0.589010989010989,
+            "difference": 0.00879120879120876
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.8160511363636364,
+            "corrected_cindex": 0.78515625,
+            "difference": -0.030894886363636354
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.6488919667590027,
+            "corrected_cindex": 0.7063711911357341,
+            "difference": 0.057479224376731364
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.5058333333333334,
+            "corrected_cindex": 0.5508333333333333,
+            "difference": 0.04499999999999993
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.6751518820360978,
+        "old_sample_sd": 0.14195650956354258,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.6866261794889748,
+        "corrected_sample_sd": 0.11327186319346683
+      },
+      "Clinical + miRNA": {
+        "folds": [
+          {
+            "fold": 1,
+            "old_cindex": 0.837956698240866,
+            "corrected_cindex": 0.510148849797023,
+            "difference": -0.32780784844384303
+          },
+          {
+            "fold": 2,
+            "old_cindex": 0.5692307692307692,
+            "corrected_cindex": 0.5532967032967033,
+            "difference": -0.015934065934065877
+          },
+          {
+            "fold": 3,
+            "old_cindex": 0.7585227272727273,
+            "corrected_cindex": 0.5159801136363636,
+            "difference": -0.24254261363636365
+          },
+          {
+            "fold": 4,
+            "old_cindex": 0.5699445983379502,
+            "corrected_cindex": 0.5498614958448753,
+            "difference": -0.020083102493074878
+          },
+          {
+            "fold": 5,
+            "old_cindex": 0.7679166666666667,
+            "corrected_cindex": 0.7691666666666667,
+            "difference": 0.0012499999999999734
+          }
+        ],
+        "old_n_folds": 5,
+        "old_mean": 0.700714291949796,
+        "old_sample_sd": 0.12357394745715644,
+        "corrected_n_folds": 5,
+        "corrected_mean": 0.5796907658483264,
+        "corrected_sample_sd": 0.10768318597998423
+      }
+    }
+  },
+  "supplementary_table_s2": {
+    "exploratory_rows": 48,
+    "rows_with_changed_deepsurv_inputs": 16,
+    "changes": [
+      {
+        "cohort": "mixed",
+        "configuration": "RNA-seq only",
+        "old_delta": -0.03959352244321268,
+        "new_delta": -0.03393109444625586,
+        "old_ci": [
+          -0.14804579076591434,
+          0.06538480255839832
+        ],
+        "new_ci": [
+          -0.14160104888526087,
+          0.07288294830167558
+        ],
+        "old_p": 0.46153846153846156,
+        "new_p": 0.5074925074925075,
+        "old_bh_fdr_p": 0.4816053511705686,
+        "new_bh_fdr_p": 0.5536281899918264,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Methylation only",
+        "old_delta": -0.04850559721769376,
+        "new_delta": -0.03238089435847458,
+        "old_ci": [
+          -0.15461950689202011,
+          0.05694813958767828
+        ],
+        "new_ci": [
+          -0.13450917957820757,
+          0.06182939395691388
+        ],
+        "old_p": 0.38961038961038963,
+        "new_p": 0.5074925074925075,
+        "old_bh_fdr_p": 0.468622286804105,
+        "new_bh_fdr_p": 0.5536281899918264,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "miRNA only",
+        "old_delta": -0.04492989892402999,
+        "new_delta": -0.12268231713944133,
+        "old_ci": [
+          -0.1516501800856419,
+          0.050370521255080764
+        ],
+        "new_ci": [
+          -0.22957641630696704,
+          -0.025347092103259337
+        ],
+        "old_p": 0.3776223776223776,
+        "new_p": 0.023976023976023976,
+        "old_bh_fdr_p": 0.468622286804105,
+        "new_bh_fdr_p": 0.07192807192807193,
+        "direction_changed": false,
+        "raw_ci_significance_changed": true,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Clinical + RNA-seq",
+        "old_delta": 0.036267796978589284,
+        "new_delta": -0.05851537876317792,
+        "old_ci": [
+          -0.05600517522436696,
+          0.1235811210760073
+        ],
+        "new_ci": [
+          -0.15016575483624509,
+          0.025292595367833914
+        ],
+        "old_p": 0.4115884115884116,
+        "new_p": 0.1998001998001998,
+        "old_bh_fdr_p": 0.468622286804105,
+        "new_bh_fdr_p": 0.26640026640026643,
+        "direction_changed": true,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Clinical + RNA-seq + Methylation",
+        "old_delta": 0.03505053798500157,
+        "new_delta": -0.06803608303445274,
+        "old_ci": [
+          -0.06022702805032554,
+          0.1363993984994544
+        ],
+        "new_ci": [
+          -0.16604010180408368,
+          0.028402728491135794
+        ],
+        "old_p": 0.5314685314685315,
+        "new_p": 0.18981018981018982,
+        "old_bh_fdr_p": 0.5314685314685315,
+        "new_bh_fdr_p": 0.26640026640026643,
+        "direction_changed": true,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Clinical + RNA-seq + miRNA",
+        "old_delta": 0.04707097054667975,
+        "new_delta": -0.012455167916530785,
+        "old_ci": [
+          -0.03690669724716238,
+          0.13284064094577663
+        ],
+        "new_ci": [
+          -0.10611168476437781,
+          0.07646432295608856
+        ],
+        "old_p": 0.30569430569430567,
+        "new_p": 0.7792207792207793,
+        "old_bh_fdr_p": 0.4315684315684315,
+        "new_bh_fdr_p": 0.8130999435347261,
+        "direction_changed": true,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Clinical + Methylation",
+        "old_delta": -0.0412889903271384,
+        "new_delta": -0.0537006847081839,
+        "old_ci": [
+          -0.13651254898435858,
+          0.053188290325760425
+        ],
+        "new_ci": [
+          -0.1436811438496179,
+          0.0318846611834124
+        ],
+        "old_p": 0.42957042957042957,
+        "new_p": 0.2517482517482518,
+        "old_bh_fdr_p": 0.468622286804105,
+        "new_bh_fdr_p": 0.3068931068931069,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "mixed",
+        "configuration": "Clinical + miRNA",
+        "old_delta": 0.044375611346592736,
+        "new_delta": 0.006912292142158494,
+        "old_ci": [
+          -0.04684884504964585,
+          0.14109647655094035
+        ],
+        "new_ci": [
+          -0.07222488824675602,
+          0.08906830314968997
+        ],
+        "old_p": 0.4155844155844156,
+        "new_p": 0.8911088911088911,
+        "old_bh_fdr_p": 0.468622286804105,
+        "new_bh_fdr_p": 0.8911088911088911,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "RNA-seq only",
+        "old_delta": -0.20756051797853026,
+        "new_delta": -0.1727876718649073,
+        "old_ci": [
+          -0.31360238030379456,
+          -0.10208453910143263
+        ],
+        "new_ci": [
+          -0.24401435253635556,
+          -0.09651536894694822
+        ],
+        "old_p": 0.001998001998001998,
+        "new_p": 0.001998001998001998,
+        "old_bh_fdr_p": 0.003688619073234458,
+        "new_bh_fdr_p": 0.003996003996003996,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Methylation only",
+        "old_delta": -0.17950164551010817,
+        "new_delta": -0.2885968159940763,
+        "old_ci": [
+          -0.275558226569973,
+          -0.07587852884651938
+        ],
+        "new_ci": [
+          -0.41368030292149804,
+          -0.16546008456901534
+        ],
+        "old_p": 0.005994005994005994,
+        "new_p": 0.001998001998001998,
+        "old_bh_fdr_p": 0.010275438846867418,
+        "new_bh_fdr_p": 0.003996003996003996,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "miRNA only",
+        "old_delta": -0.2629110147334748,
+        "new_delta": -0.2455322813816862,
+        "old_ci": [
+          -0.3295932855679559,
+          -0.18960722727931453
+        ],
+        "new_ci": [
+          -0.32317831180314077,
+          -0.1660945781818599
+        ],
+        "old_p": 0.001998001998001998,
+        "new_p": 0.001998001998001998,
+        "old_bh_fdr_p": 0.003688619073234458,
+        "new_bh_fdr_p": 0.003996003996003996,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Clinical + RNA-seq",
+        "old_delta": -0.17980068284580597,
+        "new_delta": -0.13049429423887293,
+        "old_ci": [
+          -0.25076520496372945,
+          -0.1029943755658281
+        ],
+        "new_ci": [
+          -0.22115412091084016,
+          -0.038911790193453505
+        ],
+        "old_p": 0.001998001998001998,
+        "new_p": 0.011988011988011988,
+        "old_bh_fdr_p": 0.003688619073234458,
+        "new_bh_fdr_p": 0.016924252218369865,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Clinical + RNA-seq + Methylation",
+        "old_delta": -0.21020577650641314,
+        "new_delta": -0.12425025376026577,
+        "old_ci": [
+          -0.28278340348089626,
+          -0.13883859697320272
+        ],
+        "new_ci": [
+          -0.19944898986155965,
+          -0.04157910876130185
+        ],
+        "old_p": 0.001998001998001998,
+        "new_p": 0.007992007992007992,
+        "old_bh_fdr_p": 0.003688619073234458,
+        "new_bh_fdr_p": 0.013700585129156556,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Clinical + RNA-seq + miRNA",
+        "old_delta": -0.24548614315154865,
+        "new_delta": -0.16977330749592445,
+        "old_ci": [
+          -0.3135287311159154,
+          -0.17232574639165463
+        ],
+        "new_ci": [
+          -0.26250689914930464,
+          -0.08045806002410807
+        ],
+        "old_p": 0.001998001998001998,
+        "new_p": 0.003996003996003996,
+        "old_bh_fdr_p": 0.003688619073234458,
+        "new_bh_fdr_p": 0.007377238146468916,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Clinical + Methylation",
+        "old_delta": -0.07077604503091262,
+        "new_delta": -0.04623050659776695,
+        "old_ci": [
+          -0.12387887139659694,
+          -0.01892626205400655
+        ],
+        "new_ci": [
+          -0.09651889099285066,
+          0.006665724557223437
+        ],
+        "old_p": 0.007992007992007992,
+        "new_p": 0.07992007992007992,
+        "old_bh_fdr_p": 0.012787212787212787,
+        "new_bh_fdr_p": 0.09133723419437705,
+        "direction_changed": false,
+        "raw_ci_significance_changed": true,
+        "bh_significance_changed": true
+      },
+      {
+        "cohort": "primary",
+        "configuration": "Clinical + miRNA",
+        "old_delta": -0.09009258404847587,
+        "new_delta": -0.1594998615853096,
+        "old_ci": [
+          -0.1595354407364765,
+          -0.01770621578215301
+        ],
+        "new_ci": [
+          -0.25493375811192076,
+          -0.06326389835393467
+        ],
+        "old_p": 0.017982017982017984,
+        "new_p": 0.001998001998001998,
+        "old_bh_fdr_p": 0.02157842157842158,
+        "new_bh_fdr_p": 0.003996003996003996,
+        "direction_changed": false,
+        "raw_ci_significance_changed": false,
+        "bh_significance_changed": false
+      }
+    ]
+  },
+  "shap_impact": {
+    "requires_recomputation": false,
+    "reason": "SHAP uses primary Full, already corrected in Phase 7"
+  }
+}

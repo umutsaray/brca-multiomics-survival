@@ -49,7 +49,7 @@ See [`docs/manuscript_table_mapping.md`](docs/manuscript_table_mapping.md) for t
 3. Legacy mixed-tissue analyses contain repeated participants and non-primary samples; primary-only results are the principal corrected analysis.
 4. Fold-local FDR selection is unstable and can select zero methylation features in some primary folds.
 5. Legacy CoxPH runs did not retain Newton iteration counts or inner-fit-level telemetry; convergence warnings persisted.
-6. Phase 7 corrected DeepSurv's internal-validation leakage for the Clinical-only and Full configurations; other historical ablation configurations retain their original provenance.
+6. Phases 7 and 9 corrected DeepSurv's internal-validation leakage across all ten ablation configurations. Five Methylation-only fold attempts had zero internal-train FDR-qualified probes and remain explicit missing estimates rather than using fallback features or historical risks.
 7. Raw risks are not comparable across outer folds. Phase 7 therefore uses within-fold concordance and participant-level fold-stratified bootstrap rather than pooled OOF concordance for the primary comparison.
 8. ER/PR/HER2 or molecular subtype fields were absent from the supplied clinical file, and fold-level SHAP top-20 stability remained low after leakage correction.
 

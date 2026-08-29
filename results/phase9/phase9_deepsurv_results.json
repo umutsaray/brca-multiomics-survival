@@ -1,0 +1,881 @@
+{
+  "method": {
+    "source": "Phase 7 internal-train-only cached preprocessing/selection",
+    "outer_seed": 42,
+    "internal_seed_schema": "4200 + outer_fold",
+    "training_seed_schema": "42 + outer_fold",
+    "epochs": 300,
+    "patience": 30,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "dropout": 0.3,
+    "configurations": [
+      "RNA-seq only",
+      "Methylation only",
+      "miRNA only",
+      "Clinical + RNA-seq",
+      "Clinical + RNA-seq + Methylation",
+      "Clinical + RNA-seq + miRNA",
+      "Clinical + Methylation",
+      "Clinical + miRNA"
+    ]
+  },
+  "cohorts": {
+    "mixed": {
+      "n_rows": 842,
+      "n_participants": 769,
+      "folds": [
+        {
+          "fold": 1,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4201,
+          "training_seed": 43,
+          "selection": {
+            "rna": {
+              "tested": 57722,
+              "fdr_lt_0_05": 597,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1566,
+              "fdr_lt_0_05": 10,
+              "selected": 10
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.6132295719844358,
+              "best_epoch": 1,
+              "validation_cindex": 0.7546218487394958
+            },
+            "Methylation only": {
+              "status": "skipped",
+              "reason": "zero FDR-qualified features for the requested single block",
+              "n_features": 0
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 10,
+              "cindex": 0.4575875486381323,
+              "best_epoch": 51,
+              "validation_cindex": 0.7546218487394958
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 215,
+              "cindex": 0.4287937743190661,
+              "best_epoch": 14,
+              "validation_cindex": 0.6386554621848739
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 215,
+              "cindex": 0.4287937743190661,
+              "best_epoch": 14,
+              "validation_cindex": 0.6386554621848739
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 225,
+              "cindex": 0.5789883268482491,
+              "best_epoch": 110,
+              "validation_cindex": 0.6739495798319328
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 15,
+              "cindex": 0.6832684824902724,
+              "best_epoch": 73,
+              "validation_cindex": 0.6033613445378151
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 25,
+              "cindex": 0.6007782101167315,
+              "best_epoch": 60,
+              "validation_cindex": 0.6655462184873949
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4202,
+          "training_seed": 44,
+          "selection": {
+            "rna": {
+              "tested": 57834,
+              "fdr_lt_0_05": 159,
+              "selected": 159
+            },
+            "mirna": {
+              "tested": 1557,
+              "fdr_lt_0_05": 3,
+              "selected": 3
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 159,
+              "cindex": 0.6672391584370975,
+              "best_epoch": 24,
+              "validation_cindex": 0.5553539019963702
+            },
+            "Methylation only": {
+              "status": "skipped",
+              "reason": "zero FDR-qualified features for the requested single block",
+              "n_features": 0
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 3,
+              "cindex": 0.5860884499785316,
+              "best_epoch": 1,
+              "validation_cindex": 0.662431941923775
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 175,
+              "cindex": 0.6607986260197509,
+              "best_epoch": 4,
+              "validation_cindex": 0.7150635208711433
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 175,
+              "cindex": 0.6607986260197509,
+              "best_epoch": 4,
+              "validation_cindex": 0.7150635208711433
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 178,
+              "cindex": 0.69944182052383,
+              "best_epoch": 44,
+              "validation_cindex": 0.6660617059891107
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 16,
+              "cindex": 0.7052382996994419,
+              "best_epoch": 77,
+              "validation_cindex": 0.8393829401088929
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 19,
+              "cindex": 0.5551738943752683,
+              "best_epoch": 5,
+              "validation_cindex": 0.8330308529945554
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4203,
+          "training_seed": 45,
+          "selection": {
+            "rna": {
+              "tested": 57773,
+              "fdr_lt_0_05": 440,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1560,
+              "fdr_lt_0_05": 12,
+              "selected": 12
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 66,
+              "selected": 66
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.5739130434782609,
+              "best_epoch": 10,
+              "validation_cindex": 0.4712286158631415
+            },
+            "Methylation only": {
+              "status": "fitted",
+              "n_features": 66,
+              "cindex": 0.5847826086956521,
+              "best_epoch": 22,
+              "validation_cindex": 0.5132192846034215
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 12,
+              "cindex": 0.3760869565217391,
+              "best_epoch": 44,
+              "validation_cindex": 0.5754276827371695
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.5760869565217391,
+              "best_epoch": 73,
+              "validation_cindex": 0.5241057542768274
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 282,
+              "cindex": 0.5268115942028986,
+              "best_epoch": 1,
+              "validation_cindex": 0.5583203732503889
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 228,
+              "cindex": 0.5550724637681159,
+              "best_epoch": 1,
+              "validation_cindex": 0.47900466562986005
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 82,
+              "cindex": 0.6326086956521739,
+              "best_epoch": 2,
+              "validation_cindex": 0.6003110419906688
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 28,
+              "cindex": 0.6731884057971015,
+              "best_epoch": 143,
+              "validation_cindex": 0.7744945567651633
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "outer_train_n": 673,
+          "internal_train_n": 576,
+          "internal_validation_n": 97,
+          "outer_test_n": 169,
+          "outer_seed": 42,
+          "internal_split_seed": 4204,
+          "training_seed": 46,
+          "selection": {
+            "rna": {
+              "tested": 57850,
+              "fdr_lt_0_05": 345,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1565,
+              "fdr_lt_0_05": 14,
+              "selected": 14
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 131,
+              "selected": 131
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.5738125802310655,
+              "best_epoch": 20,
+              "validation_cindex": 0.7735507246376812
+            },
+            "Methylation only": {
+              "status": "fitted",
+              "n_features": 131,
+              "cindex": 0.6230209670517758,
+              "best_epoch": 38,
+              "validation_cindex": 0.605072463768116
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 14,
+              "cindex": 0.5169020111253744,
+              "best_epoch": 71,
+              "validation_cindex": 0.6793478260869565
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.6183140778776208,
+              "best_epoch": 29,
+              "validation_cindex": 0.7898550724637681
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 347,
+              "cindex": 0.6302952503209243,
+              "best_epoch": 54,
+              "validation_cindex": 0.7663043478260869
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 230,
+              "cindex": 0.6187419768934531,
+              "best_epoch": 39,
+              "validation_cindex": 0.7880434782608695
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 147,
+              "cindex": 0.6063329054343175,
+              "best_epoch": 3,
+              "validation_cindex": 0.6105072463768116
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 30,
+              "cindex": 0.7967479674796748,
+              "best_epoch": 80,
+              "validation_cindex": 0.7228260869565217
+            }
+          }
+        },
+        {
+          "fold": 5,
+          "outer_train_n": 673,
+          "internal_train_n": 576,
+          "internal_validation_n": 97,
+          "outer_test_n": 169,
+          "outer_seed": 42,
+          "internal_split_seed": 4205,
+          "training_seed": 47,
+          "selection": {
+            "rna": {
+              "tested": 57849,
+              "fdr_lt_0_05": 247,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1567,
+              "fdr_lt_0_05": 11,
+              "selected": 11
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 4,
+              "selected": 4
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.5845799769850403,
+              "best_epoch": 48,
+              "validation_cindex": 0.5364238410596026
+            },
+            "Methylation only": {
+              "status": "fitted",
+              "n_features": 4,
+              "cindex": 0.5368239355581128,
+              "best_epoch": 25,
+              "validation_cindex": 0.5717439293598234
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 11,
+              "cindex": 0.6852704257767549,
+              "best_epoch": 19,
+              "validation_cindex": 0.5960264900662252
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.6334867663981588,
+              "best_epoch": 49,
+              "validation_cindex": 0.6688741721854304
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 220,
+              "cindex": 0.5960874568469505,
+              "best_epoch": 51,
+              "validation_cindex": 0.6445916114790287
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 227,
+              "cindex": 0.6484464902186421,
+              "best_epoch": 15,
+              "validation_cindex": 0.6754966887417219
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 20,
+              "cindex": 0.5132336018411968,
+              "best_epoch": 3,
+              "validation_cindex": 0.673289183222958
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 27,
+              "cindex": 0.7042577675489068,
+              "best_epoch": 16,
+              "validation_cindex": 0.6688741721854304
+            }
+          }
+        }
+      ]
+    },
+    "primary": {
+      "n_rows": 762,
+      "n_participants": 762,
+      "folds": [
+        {
+          "fold": 1,
+          "outer_train_n": 609,
+          "internal_train_n": 522,
+          "internal_validation_n": 87,
+          "outer_test_n": 153,
+          "outer_seed": 42,
+          "internal_split_seed": 4201,
+          "training_seed": 43,
+          "selection": {
+            "rna": {
+              "tested": 57824,
+              "fdr_lt_0_05": 248,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1564,
+              "fdr_lt_0_05": 8,
+              "selected": 8
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 5,
+              "selected": 5
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.46075778078484436,
+              "best_epoch": 1,
+              "validation_cindex": 0.5254988913525499
+            },
+            "Methylation only": {
+              "status": "fitted",
+              "n_features": 5,
+              "cindex": 0.4993234100135318,
+              "best_epoch": 1,
+              "validation_cindex": 0.5121951219512195
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 8,
+              "cindex": 0.6041948579161028,
+              "best_epoch": 1,
+              "validation_cindex": 0.43902439024390244
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.5602165087956699,
+              "best_epoch": 74,
+              "validation_cindex": 0.6496674057649667
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 221,
+              "cindex": 0.5784844384303113,
+              "best_epoch": 26,
+              "validation_cindex": 0.6053215077605322
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 224,
+              "cindex": 0.5595399188092016,
+              "best_epoch": 76,
+              "validation_cindex": 0.6430155210643016
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 21,
+              "cindex": 0.8017591339648173,
+              "best_epoch": 112,
+              "validation_cindex": 0.7361419068736141
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 24,
+              "cindex": 0.510148849797023,
+              "best_epoch": 4,
+              "validation_cindex": 0.5609756097560976
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "outer_train_n": 609,
+          "internal_train_n": 522,
+          "internal_validation_n": 87,
+          "outer_test_n": 153,
+          "outer_seed": 42,
+          "internal_split_seed": 4202,
+          "training_seed": 44,
+          "selection": {
+            "rna": {
+              "tested": 57740,
+              "fdr_lt_0_05": 395,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1559,
+              "fdr_lt_0_05": 15,
+              "selected": 15
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.4582417582417582,
+              "best_epoch": 75,
+              "validation_cindex": 0.7524752475247525
+            },
+            "Methylation only": {
+              "status": "skipped",
+              "reason": "zero FDR-qualified features for the requested single block",
+              "n_features": 0
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 15,
+              "cindex": 0.4543956043956044,
+              "best_epoch": 1,
+              "validation_cindex": 0.6742574257425743
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 215,
+              "cindex": 0.5076923076923077,
+              "best_epoch": 111,
+              "validation_cindex": 0.8396039603960396
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 215,
+              "cindex": 0.5076923076923077,
+              "best_epoch": 111,
+              "validation_cindex": 0.8396039603960396
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 230,
+              "cindex": 0.4857142857142857,
+              "best_epoch": 80,
+              "validation_cindex": 0.803960396039604
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 15,
+              "cindex": 0.589010989010989,
+              "best_epoch": 78,
+              "validation_cindex": 0.7742574257425743
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 30,
+              "cindex": 0.5532967032967033,
+              "best_epoch": 68,
+              "validation_cindex": 0.8148514851485148
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "outer_train_n": 610,
+          "internal_train_n": 523,
+          "internal_validation_n": 87,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4203,
+          "training_seed": 45,
+          "selection": {
+            "rna": {
+              "tested": 57846,
+              "fdr_lt_0_05": 136,
+              "selected": 136
+            },
+            "mirna": {
+              "tested": 1566,
+              "fdr_lt_0_05": 7,
+              "selected": 7
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 136,
+              "cindex": 0.4950284090909091,
+              "best_epoch": 1,
+              "validation_cindex": 0.6810344827586207
+            },
+            "Methylation only": {
+              "status": "skipped",
+              "reason": "zero FDR-qualified features for the requested single block",
+              "n_features": 0
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 7,
+              "cindex": 0.4435369318181818,
+              "best_epoch": 17,
+              "validation_cindex": 0.5158045977011494
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 152,
+              "cindex": 0.578125,
+              "best_epoch": 42,
+              "validation_cindex": 0.6436781609195402
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 152,
+              "cindex": 0.578125,
+              "best_epoch": 42,
+              "validation_cindex": 0.6436781609195402
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 159,
+              "cindex": 0.5426136363636364,
+              "best_epoch": 71,
+              "validation_cindex": 0.6752873563218391
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 16,
+              "cindex": 0.78515625,
+              "best_epoch": 102,
+              "validation_cindex": 0.7772988505747126
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 23,
+              "cindex": 0.5159801136363636,
+              "best_epoch": 4,
+              "validation_cindex": 0.7830459770114943
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "outer_train_n": 610,
+          "internal_train_n": 522,
+          "internal_validation_n": 88,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4204,
+          "training_seed": 46,
+          "selection": {
+            "rna": {
+              "tested": 57580,
+              "fdr_lt_0_05": 531,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1561,
+              "fdr_lt_0_05": 17,
+              "selected": 17
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 200,
+              "cindex": 0.546398891966759,
+              "best_epoch": 74,
+              "validation_cindex": 0.5276381909547738
+            },
+            "Methylation only": {
+              "status": "skipped",
+              "reason": "zero FDR-qualified features for the requested single block",
+              "n_features": 0
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 17,
+              "cindex": 0.5055401662049861,
+              "best_epoch": 32,
+              "validation_cindex": 0.5653266331658291
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.6177285318559557,
+              "best_epoch": 79,
+              "validation_cindex": 0.550251256281407
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 216,
+              "cindex": 0.6177285318559557,
+              "best_epoch": 79,
+              "validation_cindex": 0.550251256281407
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 233,
+              "cindex": 0.5457063711911357,
+              "best_epoch": 1,
+              "validation_cindex": 0.6005025125628141
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 16,
+              "cindex": 0.7063711911357341,
+              "best_epoch": 13,
+              "validation_cindex": 0.8015075376884422
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 33,
+              "cindex": 0.5498614958448753,
+              "best_epoch": 7,
+              "validation_cindex": 0.6507537688442211
+            }
+          }
+        },
+        {
+          "fold": 5,
+          "outer_train_n": 610,
+          "internal_train_n": 522,
+          "internal_validation_n": 88,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4205,
+          "training_seed": 47,
+          "selection": {
+            "rna": {
+              "tested": 57791,
+              "fdr_lt_0_05": 112,
+              "selected": 112
+            },
+            "mirna": {
+              "tested": 1543,
+              "fdr_lt_0_05": 5,
+              "selected": 5
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 2,
+              "selected": 2
+            }
+          },
+          "configurations": {
+            "RNA-seq only": {
+              "status": "fitted",
+              "n_features": 112,
+              "cindex": 0.7025,
+              "best_epoch": 13,
+              "validation_cindex": 0.6309523809523809
+            },
+            "Methylation only": {
+              "status": "fitted",
+              "n_features": 2,
+              "cindex": 0.44916666666666666,
+              "best_epoch": 2,
+              "validation_cindex": 0.7718253968253969
+            },
+            "miRNA only": {
+              "status": "fitted",
+              "n_features": 5,
+              "cindex": 0.4975,
+              "best_epoch": 1,
+              "validation_cindex": 0.46130952380952384
+            },
+            "Clinical + RNA-seq": {
+              "status": "fitted",
+              "n_features": 128,
+              "cindex": 0.7191666666666666,
+              "best_epoch": 55,
+              "validation_cindex": 0.6845238095238095
+            },
+            "Clinical + RNA-seq + Methylation": {
+              "status": "fitted",
+              "n_features": 130,
+              "cindex": 0.5425,
+              "best_epoch": 4,
+              "validation_cindex": 0.7817460317460317
+            },
+            "Clinical + RNA-seq + miRNA": {
+              "status": "fitted",
+              "n_features": 133,
+              "cindex": 0.505,
+              "best_epoch": 2,
+              "validation_cindex": 0.75
+            },
+            "Clinical + Methylation": {
+              "status": "fitted",
+              "n_features": 18,
+              "cindex": 0.5508333333333333,
+              "best_epoch": 1,
+              "validation_cindex": 0.7976190476190477
+            },
+            "Clinical + miRNA": {
+              "status": "fitted",
+              "n_features": 21,
+              "cindex": 0.7691666666666667,
+              "best_epoch": 85,
+              "validation_cindex": 0.7767857142857143
+            }
+          }
+        }
+      ]
+    }
+  },
+  "fits_requested": 80,
+  "fits_completed": 75,
+  "fits_skipped": 5,
+  "elapsed_seconds": 63.01171639999666
+}

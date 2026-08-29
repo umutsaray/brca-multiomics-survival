@@ -28,7 +28,7 @@ This document records the settings actually used by the Phase 1/2 code. Global C
 - Loss is the mean negative Cox partial log-likelihood. Event times are sorted descending; `logcumsumexp` forms risk sets. Ties use the code's Breslow-style shared full tied risk set.
 - For the Phase 7 Clinical-only and Full results, each outer-training fold is split first with seven-fold `StratifiedGroupKFold`; its first held fold is internal validation (~14.3%). The split is event-stratified and participant-grouped in both cohorts.
 - For those Phase 7 results, univariate Cox/FDR selection, methylation variance filtering/KNN imputation, clinical imputation/encoding, and scaling are fitted only on internal train. Internal validation and outer test are transform-only. Internal validation is used only for early stopping; outer test is predicted once.
-- Phase 7 seeds are: outer split 42; internal split `4200 + outer_fold`; DeepSurv training `42 + outer_fold`. Historical ablation configurations other than Clinical-only and Full retain the earlier implementation and are not relabelled as Phase 7-corrected.
+- Phase 7 corrected Clinical-only and Full; Phase 9 applied the identical procedure to the remaining eight ablation configurations. Seeds are: outer split 42; internal split `4200 + outer_fold`; DeepSurv training `42 + outer_fold`. Five Methylation-only attempts with zero internal-train FDR-qualified probes were not estimable and are reported as missing without fallback or historical-risk substitution.
 - Reported risk is the network's raw scalar output (log-risk scale).
 
 ## Fold-local versus inner-fold preprocessing
