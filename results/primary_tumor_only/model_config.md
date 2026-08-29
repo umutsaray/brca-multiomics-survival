@@ -24,6 +24,7 @@ This document records the settings actually used by the Phase 1/2 code. Global C
 - Concatenated head: Linear(total, 64)–ReLU–Dropout–Linear(64, 16)–ReLU–Linear(16, 1).
 - Dropout 0.3. Optimizer AdamW, learning rate 0.001, weight decay 0.0001.
 - Maximum 300 epochs; early-stopping patience 30; improvement tolerance 0.000001.
+- There is no second retraining stage after epoch selection. A single network is optimized on internal train, its best internal-validation checkpoint is restored, and that restored checkpoint directly predicts the outer test fold. Internal validation is never merged back into the optimization set.
 - Training is full-batch: batch size equals the fit subset size. The risk set therefore spans the complete fit subset at every optimization step.
 - Loss is the mean negative Cox partial log-likelihood. Event times are sorted descending; `logcumsumexp` forms risk sets. Ties use the code's Breslow-style shared full tied risk set.
 - For the Phase 7 Clinical-only and Full results, each outer-training fold is split first with seven-fold `StratifiedGroupKFold`; its first held fold is internal validation (~14.3%). The split is event-stratified and participant-grouped in both cohorts.
