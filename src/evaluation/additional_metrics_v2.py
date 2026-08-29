@@ -33,14 +33,15 @@ def evaluate(d: pd.DataFrame) -> dict:
     return output
 
 def main():
-    root=Path(__file__).resolve().parent;result={"method":{ "time_dependent_auc_horizons_days":H.tolist(),"mean_auc_definition":"sksurv cumulative_dynamic_auc survival-function-weighted mean over the supplied 1/3/5-year grid; not arithmetic mean", "ibs_grid":"100 equally spaced points from day 365 through day 1825", "ipcw_censoring_source":"for each held-out outer fold, the other four OOF-fold outcomes; never that held fold", "aggregation":"test-fold-N-weighted mean", "absolute_survival":"one-covariate Cox calibration fitted on the other four OOF folds"}}
-    for cohort,suffix in (("mixed","_extended"),("primary","_primary")):
-        path=root/f"ablation_oof{suffix}.parquet"
-        if not path.is_file():continue
-        all_=pd.read_parquet(path);result[cohort]={}
+    here=Path(__file__).resolve().parent;repo=here.parents[1];target=repo/'results/primary_tumor_only';corrected=pd.read_parquet(repo/'results/phase7/phase7_deepsurv_oof.parquet');result={"method":{ "time_dependent_auc_horizons_days":H.tolist(),"mean_auc_definition":"sksurv cumulative_dynamic_auc survival-function-weighted mean over the supplied 1/3/5-year grid; not arithmetic mean", "ibs_grid":"100 equally spaced points from day 365 through day 1825", "ipcw_censoring_source":"for each held-out outer fold, the other four OOF-fold outcomes; never that held fold", "aggregation":"test-fold-N-weighted mean", "absolute_survival":"one-covariate Cox calibration fitted on the other four OOF folds", "coxph_rsf_source":"retained Phase 2/5 ablation OOF predictions", "deepsurv_source":"Phase 7 leakage-corrected OOF predictions from results/phase7/phase7_deepsurv_oof.parquet"}}
+    paths={"mixed":repo/'results/mixed_cohort/ablation_oof_extended.parquet',"primary":repo/'results/primary_tumor_only/ablation_oof_primary.parquet'}
+    for cohort,path in paths.items():
+        all_=pd.read_parquet(path);all_=all_[all_.configuration.isin(('Clinical-only','Full'))].copy();repl=corrected[corrected.cohort.eq(cohort)][['sample_key','fold','configuration','deepsurv']].rename(columns={'deepsurv':'deepsurv_corrected'});all_=all_.merge(repl,on=['sample_key','fold','configuration'],how='left',validate='one_to_one')
+        if all_.deepsurv_corrected.isna().any():raise RuntimeError(f'Missing corrected DeepSurv predictions for {cohort}')
+        all_['deepsurv']=all_.pop('deepsurv_corrected');result[cohort]={}
         for config in ("Clinical-only","Full"):
             d=all_[all_.configuration.eq(config)].reset_index(drop=True);print(cohort,config,len(d));result[cohort][config]=evaluate(d)
-    (root/'additional_metrics_v2.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+    target.mkdir(parents=True,exist_ok=True);(target/'additional_metrics_v2.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     lines=['# Additional Metrics v2','',result['method']['mean_auc_definition']+'.',f"IBS grid: {result['method']['ibs_grid']}.",f"IPCW censoring source: {result['method']['ipcw_censoring_source']}.",'']
     for cohort,sets in result.items():
         if cohort=='method':continue
@@ -48,5 +49,5 @@ def main():
         for config,models in sets.items():
             for m,x in models.items():lines.append(f"| {config} | {m} | {x['mean_uno_c_index']} | {x['mean_auc_1y']} | {x['mean_auc_3y']} | {x['mean_auc_5y']} | {x['mean_weighted_mean_auc']} | {x['mean_ibs']} |")
         lines += ['', 'Five-year calibration group details (including Greenwood CI, unique participants at risk, and events) are preserved without rounding in `additional_metrics_v2.json`.', '']
-    (root/'additional_metrics_v2.md').write_text('\n'.join(lines),encoding='utf-8');print('additional_metrics_v2.md/json written')
+    (target/'additional_metrics_v2.md').write_text('\n'.join(lines),encoding='utf-8');print(f'additional_metrics_v2.md/json written to {target}')
 if __name__=='__main__':main()

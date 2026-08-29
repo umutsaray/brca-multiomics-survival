@@ -1,0 +1,152 @@
+{
+  "code_finding": {
+    "pre_phase11_input": "ablation_oof_extended.parquet / ablation_oof_primary.parquet, including original DeepSurv column",
+    "phase11_deepsurv_input": "results/phase7/phase7_deepsurv_oof.parquet",
+    "phase11_code_lines": "src/evaluation/additional_metrics_v2.py:35-43"
+  },
+  "comparison_rows": [
+    {
+      "cohort": "mixed",
+      "configuration": "Clinical-only",
+      "metric": "mean_uno_c_index",
+      "old_repository": 0.6310334831205384,
+      "manuscript": 0.602,
+      "phase11_reproduced": 0.6018177342696371,
+      "phase11_minus_old": -0.02921574885090128,
+      "phase11_minus_manuscript": -0.00018226573036284055,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "mixed",
+      "configuration": "Full",
+      "metric": "mean_uno_c_index",
+      "old_repository": 0.6089233216566455,
+      "manuscript": 0.651,
+      "phase11_reproduced": 0.6514004303326536,
+      "phase11_minus_old": 0.04247710867600807,
+      "phase11_minus_manuscript": 0.0004004303326535785,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Clinical-only",
+      "metric": "mean_uno_c_index",
+      "old_repository": 0.5271477709467122,
+      "manuscript": 0.521,
+      "phase11_reproduced": 0.5210439780748914,
+      "phase11_minus_old": -0.0061037928718207235,
+      "phase11_minus_manuscript": 4.3978074891426466e-05,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Full",
+      "metric": "mean_uno_c_index",
+      "old_repository": 0.4270524349475583,
+      "manuscript": 0.446,
+      "phase11_reproduced": 0.4461203635013299,
+      "phase11_minus_old": 0.019067928553771596,
+      "phase11_minus_manuscript": 0.00012036350132987872,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Clinical-only",
+      "metric": "mean_auc_1y",
+      "old_repository": 0.9119971256500268,
+      "manuscript": 0.886,
+      "phase11_reproduced": 0.8859609461982173,
+      "phase11_minus_old": -0.02603617945180947,
+      "phase11_minus_manuscript": -3.90538017827069e-05,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Full",
+      "metric": "mean_auc_1y",
+      "old_repository": 0.5719288775198998,
+      "manuscript": 0.486,
+      "phase11_reproduced": 0.48560199705854123,
+      "phase11_minus_old": -0.08632688046135861,
+      "phase11_minus_manuscript": -0.0003980029414587527,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Full",
+      "metric": "mean_auc_3y",
+      "old_repository": 0.5550476462054192,
+      "manuscript": 0.503,
+      "phase11_reproduced": 0.5031436678204458,
+      "phase11_minus_old": -0.051903978384973404,
+      "phase11_minus_manuscript": 0.00014366782044583637,
+      "matches_manuscript_at_3_decimals": true
+    },
+    {
+      "cohort": "primary",
+      "configuration": "Full",
+      "metric": "mean_auc_5y",
+      "old_repository": 0.5137756039112213,
+      "manuscript": 0.577,
+      "phase11_reproduced": 0.5771000516229361,
+      "phase11_minus_old": 0.06332444771171475,
+      "phase11_minus_manuscript": 0.00010005162293613701,
+      "matches_manuscript_at_3_decimals": true
+    }
+  ],
+  "all_reproduced_deepsurv_metrics": {
+    "mixed": {
+      "Clinical-only": {
+        "mean_uno_c_index": 0.6018177342696371,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.7307099524827663,
+        "mean_auc_5y": 0.7168170647783507,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.08938265920438601
+      },
+      "Full": {
+        "mean_uno_c_index": 0.6514004303326536,
+        "mean_auc_1y": NaN,
+        "mean_auc_3y": 0.6332001811633551,
+        "mean_auc_5y": 0.5943820473854725,
+        "mean_weighted_mean_auc": NaN,
+        "mean_ibs": 0.09132196889317164
+      }
+    },
+    "primary": {
+      "Clinical-only": {
+        "mean_uno_c_index": 0.5210439780748914,
+        "mean_auc_1y": 0.8859609461982173,
+        "mean_auc_3y": 0.7611255206684682,
+        "mean_auc_5y": 0.7065220392456198,
+        "mean_weighted_mean_auc": 0.7387750070944079,
+        "mean_ibs": 0.08099508182605586
+      },
+      "Full": {
+        "mean_uno_c_index": 0.4461203635013299,
+        "mean_auc_1y": 0.48560199705854123,
+        "mean_auc_3y": 0.5031436678204458,
+        "mean_auc_5y": 0.5771000516229361,
+        "mean_weighted_mean_auc": 0.5470002272948029,
+        "mean_ibs": 0.08352139932385036
+      }
+    }
+  },
+  "maximum_difference_from_phase7_verified_metrics": 0.0,
+  "maximum_finite_coxph_rsf_difference_from_pre_phase11": 0.0,
+  "figure_s1": {
+    "input": "results/primary_tumor_only/additional_metrics_v2.json",
+    "plot_script": "src/explainability/plot_calibration.py",
+    "sha256": "259e603b666d8f6f9e15c2cc937fb15036d7cee5e32a8c8eda7ffa1fac256f04",
+    "byte_identical_to_pre_phase11_committed_png": true,
+    "status": "regenerated Phase 11 from corrected risks"
+  },
+  "figure_s2": {
+    "input": "results/phase7/shap_phase7_results.json",
+    "plot_script": "src/explainability/plot_shap_summary.py",
+    "sha256": "f83deb76c5d42d2bbf82af359c25a96448005a946c1ba5c592561f828279ee40",
+    "independent_reproduction_sha256_match": true,
+    "status": "Phase 7 corrected primary-tumor-only Full; not legacy"
+  },
+  "mapping_file": "docs/manuscript_table_mapping.md"
+}
