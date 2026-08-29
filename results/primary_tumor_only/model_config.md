@@ -26,9 +26,9 @@ This document records the settings actually used by the Phase 1/2 code. Global C
 - Maximum 300 epochs; early-stopping patience 30; improvement tolerance 0.000001.
 - Training is full-batch: batch size equals the fit subset size. The risk set therefore spans the complete fit subset at every optimization step.
 - Loss is the mean negative Cox partial log-likelihood. Event times are sorted descending; `logcumsumexp` forms risk sets. Ties use the code's Breslow-style shared full tied risk set.
-- Internal validation fraction is 0.15 and is event-stratified via `train_test_split`. It is not explicitly participant-grouped. This is equivalent to participant splitting only in the primary-only cohort; in the mixed cohort, duplicate records from a participant can cross this internal split.
-- Univariate selection and outer-fold imputation are performed before this internal validation split. Therefore, the survival outcomes of records later assigned to internal validation are used by the univariate Cox ranking. This creates minor leakage into the internal early-stopping validation assessment, although the untouched outer-test fold remains excluded from preprocessing, selection, training, and early stopping. Scaling is fitted only on the neural-network fit subset and then applied to validation/test. See `deepsurv_internal_split_audit.md`.
-- Seeds set Python `random`, NumPy, and PyTorch; deterministic algorithms are requested with warning-only fallback. Ablation seed is `42 + outer_fold`; sensitivity seed is `42 + 100*outer_fold + N`.
+- For the Phase 7 Clinical-only and Full results, each outer-training fold is split first with seven-fold `StratifiedGroupKFold`; its first held fold is internal validation (~14.3%). The split is event-stratified and participant-grouped in both cohorts.
+- For those Phase 7 results, univariate Cox/FDR selection, methylation variance filtering/KNN imputation, clinical imputation/encoding, and scaling are fitted only on internal train. Internal validation and outer test are transform-only. Internal validation is used only for early stopping; outer test is predicted once.
+- Phase 7 seeds are: outer split 42; internal split `4200 + outer_fold`; DeepSurv training `42 + outer_fold`. Historical ablation configurations other than Clinical-only and Full retain the earlier implementation and are not relabelled as Phase 7-corrected.
 - Reported risk is the network's raw scalar output (log-risk scale).
 
 ## Fold-local versus inner-fold preprocessing

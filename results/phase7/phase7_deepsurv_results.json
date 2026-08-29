@@ -1,0 +1,497 @@
+{
+  "method": {
+    "outer_split": "5-fold StratifiedGroupKFold, participant-grouped/event-stratified",
+    "outer_seed": 42,
+    "internal_split": "first held fold of 7-fold StratifiedGroupKFold on outer-training only (~1/7 validation), participant-grouped/event-stratified",
+    "internal_seed_schema": "4200 + outer_fold",
+    "training_seed_schema": "42 + outer_fold",
+    "selection": "internal-train-only univariate Cox, BH-FDR < 0.05, cap 200/block",
+    "all learned preprocessing": "fit internal-train only",
+    "torch_threads": 1
+  },
+  "cohorts": {
+    "mixed": {
+      "n_rows": 842,
+      "n_participants": 769,
+      "folds": [
+        {
+          "fold": 1,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4201,
+          "training_seed": 43,
+          "selection": {
+            "rna": {
+              "tested": 57722,
+              "fdr_lt_0_05": 597,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1566,
+              "fdr_lt_0_05": 10,
+              "selected": 10
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 60.73287939999136,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.6832684824902724,
+              "best_epoch": 73,
+              "validation_cindex": 0.6033613445378151,
+              "n_features": 15
+            },
+            "Full": {
+              "cindex": 0.5789883268482491,
+              "best_epoch": 110,
+              "validation_cindex": 0.6739495798319328,
+              "n_features": 225
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4202,
+          "training_seed": 44,
+          "selection": {
+            "rna": {
+              "tested": 57834,
+              "fdr_lt_0_05": 159,
+              "selected": 159
+            },
+            "mirna": {
+              "tested": 1557,
+              "fdr_lt_0_05": 3,
+              "selected": 3
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 64.04325829999289,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.7052382996994419,
+              "best_epoch": 77,
+              "validation_cindex": 0.8393829401088929,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.69944182052383,
+              "best_epoch": 44,
+              "validation_cindex": 0.6660617059891107,
+              "n_features": 178
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "outer_train_n": 674,
+          "internal_train_n": 577,
+          "internal_validation_n": 97,
+          "outer_test_n": 168,
+          "outer_seed": 42,
+          "internal_split_seed": 4203,
+          "training_seed": 45,
+          "selection": {
+            "rna": {
+              "tested": 57773,
+              "fdr_lt_0_05": 440,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1560,
+              "fdr_lt_0_05": 12,
+              "selected": 12
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 66,
+              "selected": 66
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 64.35115690001112,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.736231884057971,
+              "best_epoch": 34,
+              "validation_cindex": 0.7667185069984448,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.4326086956521739,
+              "best_epoch": 2,
+              "validation_cindex": 0.5552099533437014,
+              "n_features": 294
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "outer_train_n": 673,
+          "internal_train_n": 576,
+          "internal_validation_n": 97,
+          "outer_test_n": 169,
+          "outer_seed": 42,
+          "internal_split_seed": 4204,
+          "training_seed": 46,
+          "selection": {
+            "rna": {
+              "tested": 57850,
+              "fdr_lt_0_05": 345,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1565,
+              "fdr_lt_0_05": 14,
+              "selected": 14
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 131,
+              "selected": 131
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 80.70793170000252,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.7811296534017972,
+              "best_epoch": 103,
+              "validation_cindex": 0.7264492753623188,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.6302952503209243,
+              "best_epoch": 31,
+              "validation_cindex": 0.7536231884057971,
+              "n_features": 361
+            }
+          }
+        },
+        {
+          "fold": 5,
+          "outer_train_n": 673,
+          "internal_train_n": 576,
+          "internal_validation_n": 97,
+          "outer_test_n": 169,
+          "outer_seed": 42,
+          "internal_split_seed": 4205,
+          "training_seed": 47,
+          "selection": {
+            "rna": {
+              "tested": 57849,
+              "fdr_lt_0_05": 247,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1567,
+              "fdr_lt_0_05": 11,
+              "selected": 11
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 4,
+              "selected": 4
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 64.30422370000451,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.7917146144994246,
+              "best_epoch": 17,
+              "validation_cindex": 0.58719646799117,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.619102416570771,
+              "best_epoch": 12,
+              "validation_cindex": 0.5761589403973509,
+              "n_features": 231
+            }
+          }
+        }
+      ]
+    },
+    "primary": {
+      "n_rows": 762,
+      "n_participants": 762,
+      "folds": [
+        {
+          "fold": 1,
+          "outer_train_n": 609,
+          "internal_train_n": 522,
+          "internal_validation_n": 87,
+          "outer_test_n": 153,
+          "outer_seed": 42,
+          "internal_split_seed": 4201,
+          "training_seed": 43,
+          "selection": {
+            "rna": {
+              "tested": 57824,
+              "fdr_lt_0_05": 248,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1564,
+              "fdr_lt_0_05": 8,
+              "selected": 8
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 5,
+              "selected": 5
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 62.6897231000039,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.8298376184032477,
+              "best_epoch": 54,
+              "validation_cindex": 0.8126385809312638,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.5690121786197564,
+              "best_epoch": 118,
+              "validation_cindex": 0.6807095343680709,
+              "n_features": 229
+            }
+          }
+        },
+        {
+          "fold": 2,
+          "outer_train_n": 609,
+          "internal_train_n": 522,
+          "internal_validation_n": 87,
+          "outer_test_n": 153,
+          "outer_seed": 42,
+          "internal_split_seed": 4202,
+          "training_seed": 44,
+          "selection": {
+            "rna": {
+              "tested": 57740,
+              "fdr_lt_0_05": 395,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1559,
+              "fdr_lt_0_05": 15,
+              "selected": 15
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 64.67210359999444,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.589010989010989,
+              "best_epoch": 78,
+              "validation_cindex": 0.7742574257425743,
+              "n_features": 15
+            },
+            "Full": {
+              "cindex": 0.4857142857142857,
+              "best_epoch": 80,
+              "validation_cindex": 0.803960396039604,
+              "n_features": 230
+            }
+          }
+        },
+        {
+          "fold": 3,
+          "outer_train_n": 610,
+          "internal_train_n": 523,
+          "internal_validation_n": 87,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4203,
+          "training_seed": 45,
+          "selection": {
+            "rna": {
+              "tested": 57846,
+              "fdr_lt_0_05": 136,
+              "selected": 136
+            },
+            "mirna": {
+              "tested": 1566,
+              "fdr_lt_0_05": 7,
+              "selected": 7
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 64.69236960000126,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.78515625,
+              "best_epoch": 102,
+              "validation_cindex": 0.7772988505747126,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.5426136363636364,
+              "best_epoch": 71,
+              "validation_cindex": 0.6752873563218391,
+              "n_features": 159
+            }
+          }
+        },
+        {
+          "fold": 4,
+          "outer_train_n": 610,
+          "internal_train_n": 522,
+          "internal_validation_n": 88,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4204,
+          "training_seed": 46,
+          "selection": {
+            "rna": {
+              "tested": 57580,
+              "fdr_lt_0_05": 531,
+              "selected": 200
+            },
+            "mirna": {
+              "tested": 1561,
+              "fdr_lt_0_05": 17,
+              "selected": 17
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 0,
+              "selected": 0
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 63.6627284999995,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.7063711911357341,
+              "best_epoch": 13,
+              "validation_cindex": 0.8015075376884422,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.5457063711911357,
+              "best_epoch": 1,
+              "validation_cindex": 0.6005025125628141,
+              "n_features": 233
+            }
+          }
+        },
+        {
+          "fold": 5,
+          "outer_train_n": 610,
+          "internal_train_n": 522,
+          "internal_validation_n": 88,
+          "outer_test_n": 152,
+          "outer_seed": 42,
+          "internal_split_seed": 4205,
+          "training_seed": 47,
+          "selection": {
+            "rna": {
+              "tested": 57791,
+              "fdr_lt_0_05": 112,
+              "selected": 112
+            },
+            "mirna": {
+              "tested": 1543,
+              "fdr_lt_0_05": 5,
+              "selected": 5
+            },
+            "methylation": {
+              "tested": 10000,
+              "fdr_lt_0_05": 2,
+              "selected": 2
+            }
+          },
+          "preprocessing": {
+            "methylation_total": 486427,
+            "methylation_prefiltered": 10000,
+            "variance_seconds": 62.7516736999969,
+            "knn_neighbors": 5
+          },
+          "models": {
+            "Clinical-only": {
+              "cindex": 0.81125,
+              "best_epoch": 24,
+              "validation_cindex": 0.7728174603174603,
+              "n_features": 16
+            },
+            "Full": {
+              "cindex": 0.48833333333333334,
+              "best_epoch": 3,
+              "validation_cindex": 0.753968253968254,
+              "n_features": 135
+            }
+          }
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 4787.221715099993
+}
