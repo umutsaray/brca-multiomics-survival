@@ -1,0 +1,3 @@
+Comparison,Wilcoxon p-value,Bootstrap mean difference,95% CI,Significant
+DeepSurv vs CoxPH,0.3125,0.03934835766237502,"[-0.05316103010958706, 0.1663211835726834]",No
+DeepSurv vs Random Survival Forest,0.125,0.03131173145862762,"[-0.06476056379129216, 0.1259146529730082]",No

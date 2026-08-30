@@ -1,0 +1,4 @@
+Model,C-index,95% CI,Validation scheme
+CoxPH,0.7064765300059418,"[0.5146235268728914, 0.8622735382074371]","Original, non-participant-grouped single train/test split"
+Random Survival Forest,0.714795008912656,"[0.5598458138821741, 0.8279464235842526]","Original, non-participant-grouped single train/test split"
+DeepSurv,0.7456922162804516,"[0.6187689806562355, 0.8447662489579691]","Original, non-participant-grouped single train/test split"
