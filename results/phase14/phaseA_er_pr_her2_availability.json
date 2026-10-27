@@ -1,0 +1,269 @@
+{
+  "check": "A - ER / PR / HER2 availability",
+  "status": "completed",
+  "no_modelling": true,
+  "command": "C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\.venv\\Scripts\\python.exe .\\brca-multiomics-survival\\src\\evaluation\\phase14_a_clinical_availability.py --input-dir . --output-dir .\\brca-multiomics-survival\\results\\phase14",
+  "versions": {
+    "python": "3.14.7",
+    "pandas": "2.3.3",
+    "numpy": "2.5.2"
+  },
+  "seeds": null,
+  "runtime_seconds": 2.6271913999225944,
+  "local_files": {
+    "TCGA-BRCA.clinical.tsv.gz": {
+      "n_rows": 1255,
+      "n_columns": 85,
+      "columns": [
+        "sample",
+        "id",
+        "disease_type",
+        "case_id",
+        "submitter_id",
+        "primary_site",
+        "alcohol_history.exposures",
+        "race.demographic",
+        "gender.demographic",
+        "ethnicity.demographic",
+        "vital_status.demographic",
+        "age_at_index.demographic",
+        "days_to_birth.demographic",
+        "year_of_birth.demographic",
+        "year_of_death.demographic",
+        "primary_site.project",
+        "project_id.project",
+        "disease_type.project",
+        "name.project",
+        "name.program.project",
+        "tissue_source_site_id.tissue_source_site",
+        "code.tissue_source_site",
+        "name.tissue_source_site",
+        "project.tissue_source_site",
+        "bcr_id.tissue_source_site",
+        "days_to_death.demographic",
+        "entity_submitter_id.annotations",
+        "notes.annotations",
+        "submitter_id.annotations",
+        "classification.annotations",
+        "entity_id.annotations",
+        "created_datetime.annotations",
+        "annotation_id.annotations",
+        "entity_type.annotations",
+        "updated_datetime.annotations",
+        "case_id.annotations",
+        "state.annotations",
+        "category.annotations",
+        "status.annotations",
+        "case_submitter_id.annotations",
+        "synchronous_malignancy.diagnoses",
+        "ajcc_pathologic_stage.diagnoses",
+        "days_to_diagnosis.diagnoses",
+        "last_known_disease_status.diagnoses",
+        "tissue_or_organ_of_origin.diagnoses",
+        "days_to_last_follow_up.diagnoses",
+        "age_at_diagnosis.diagnoses",
+        "primary_diagnosis.diagnoses",
+        "prior_malignancy.diagnoses",
+        "year_of_diagnosis.diagnoses",
+        "prior_treatment.diagnoses",
+        "ajcc_staging_system_edition.diagnoses",
+        "ajcc_pathologic_t.diagnoses",
+        "morphology.diagnoses",
+        "ajcc_pathologic_n.diagnoses",
+        "ajcc_pathologic_m.diagnoses",
+        "classification_of_tumor.diagnoses",
+        "icd_10_code.diagnoses",
+        "site_of_resection_or_biopsy.diagnoses",
+        "tumor_grade.diagnoses",
+        "progression_or_recurrence.diagnoses",
+        "age_at_earliest_diagnosis.diagnoses.xena_derived",
+        "age_at_earliest_diagnosis_in_years.diagnoses.xena_derived",
+        "treatment_id.treatments.diagnoses",
+        "submitter_id.treatments.diagnoses",
+        "treatment_type.treatments.diagnoses",
+        "treatment_or_therapy.treatments.diagnoses",
+        "created_datetime.treatments.diagnoses",
+        "updated_datetime.treatments.diagnoses",
+        "state.treatments.diagnoses",
+        "sample_type_id.samples",
+        "tumor_descriptor.samples",
+        "sample_id.samples",
+        "sample_type.samples",
+        "composition.samples",
+        "days_to_collection.samples",
+        "initial_weight.samples",
+        "preservation_method.samples",
+        "pathology_report_uuid.samples",
+        "oct_embedded.samples",
+        "specimen_type.samples",
+        "days_to_sample_procurement.samples",
+        "is_ffpe.samples",
+        "tissue_type.samples",
+        "annotations.samples"
+      ],
+      "receptor_or_subtype_column_matches": [],
+      "has_er_pr_her2_or_molecular_subtype": false
+    },
+    "TCGA-BRCA.survival.tsv.gz": {
+      "n_rows": 1232,
+      "n_columns": 4,
+      "columns": [
+        "sample",
+        "OS.time",
+        "OS",
+        "_PATIENT"
+      ],
+      "receptor_or_subtype_column_matches": [],
+      "has_er_pr_her2_or_molecular_subtype": false
+    }
+  },
+  "xena_source": {
+    "dataset": "TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+    "url": "https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+    "hub": "UCSC Xena legacy TCGA hub",
+    "n_rows": 1247,
+    "n_columns": 194,
+    "relevant_columns_and_observed_categories": {
+      "ER_Status_nature2012": [
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "PR_Status_nature2012": [
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "HER2_Final_Status_nature2012": [
+        "Equivocal",
+        "Negative",
+        "Positive"
+      ],
+      "PAM50Call_RNAseq": [
+        "Basal",
+        "Her2",
+        "LumA",
+        "LumB",
+        "Normal"
+      ],
+      "PAM50_mRNA_nature2012": [
+        "Basal-like",
+        "HER2-enriched",
+        "Luminal A",
+        "Luminal B",
+        "Normal-like"
+      ],
+      "Integrated_Clusters_with_PAM50__nature2012": [
+        "1.0",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "breast_carcinoma_estrogen_receptor_status": [
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "breast_carcinoma_progesterone_receptor_status": [
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": [
+        "Equivocal",
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": [
+        "Equivocal",
+        "Indeterminate",
+        "Negative",
+        "Positive"
+      ],
+      "metastatic_breast_carcinoma_estrogen_receptor_status": [
+        "Negative",
+        "Positive"
+      ],
+      "metastatic_breast_carcinoma_progesterone_receptor_status": [
+        "Negative",
+        "Positive"
+      ]
+    },
+    "canonical_columns_used_for_participant_match": {
+      "ER status": "ER_Status_nature2012",
+      "PR status": "PR_Status_nature2012",
+      "HER2 status": "HER2_Final_Status_nature2012",
+      "PAM50 subtype": "PAM50Call_RNAseq"
+    }
+  },
+  "primary_cohort": {
+    "n_participants": 762,
+    "n_events": 99,
+    "match_key": "first 12 characters of the TCGA barcode",
+    "xena_row_scope_before_participant_match": "sample type 01 (Primary Tumor), matching the corrected cohort; then collapse by 12-character participant barcode",
+    "variables": {
+      "ER status": {
+        "column": "ER_Status_nature2012",
+        "status": "available",
+        "n_available": 458,
+        "n_missing": 304,
+        "category_counts": {
+          "Negative": 103,
+          "Positive": 355
+        },
+        "not_evaluated_observed_count": 0,
+        "n_events_total": 99,
+        "n_events_with_variable_available": 64,
+        "participant_conflicts": []
+      },
+      "PR status": {
+        "column": "PR_Status_nature2012",
+        "status": "available",
+        "n_available": 457,
+        "n_missing": 305,
+        "category_counts": {
+          "Indeterminate": 2,
+          "Negative": 140,
+          "Positive": 315
+        },
+        "not_evaluated_observed_count": 0,
+        "n_events_total": 99,
+        "n_events_with_variable_available": 64,
+        "participant_conflicts": []
+      },
+      "HER2 status": {
+        "column": "HER2_Final_Status_nature2012",
+        "status": "available",
+        "n_available": 455,
+        "n_missing": 307,
+        "category_counts": {
+          "Equivocal": 3,
+          "Negative": 395,
+          "Positive": 57
+        },
+        "not_evaluated_observed_count": 0,
+        "n_events_total": 99,
+        "n_events_with_variable_available": 59,
+        "participant_conflicts": []
+      },
+      "PAM50 subtype": {
+        "column": "PAM50Call_RNAseq",
+        "status": "available",
+        "n_available": 523,
+        "n_missing": 239,
+        "category_counts": {
+          "Basal": 78,
+          "Her2": 29,
+          "LumA": 275,
+          "LumB": 124,
+          "Normal": 17
+        },
+        "not_evaluated_observed_count": 0,
+        "n_events_total": 99,
+        "n_events_with_variable_available": 73,
+        "participant_conflicts": []
+      }
+    }
+  }
+}
