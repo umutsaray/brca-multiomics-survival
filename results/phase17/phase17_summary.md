@@ -65,24 +65,24 @@ The two censoring-outcome constructions used identical outcome sets in every fol
 
 Status: **stopped**.
 
-Stop reason: Stopped because projected remaining runtime 20513.152537505142 seconds exceeded the pre-fixed 10800-second threshold.
-Actual elapsed seconds: `838.0257824000437`. Projected remaining seconds: `20513.152537505142`. Completed checkpoints: `1`.
+Stop reason: Stopped because projected remaining runtime 30490.219383898893 seconds exceeded the pre-fixed 25200.0-second threshold.
+Actual elapsed seconds: `3525.293533799937`. Projected remaining seconds: `30490.219383898893`. Completed checkpoints: `3`.
 
 RSF and DeepSurv were skipped by the pre-fixed runtime decision. CoxPH used fixed ridge penalizer 0.1.
 
-The 50% values contain one completed outer fold and one repetition only, not the pre-specified five-fold repetition-averaged estimand; the 75% analysis was not started. Neither is interpreted as a completed learning-curve result.
+The reduced design did not complete. Available reduced-fraction values are checkpointed partial results and are not interpreted as the completed learning-curve estimand.
 
 | Fraction | Configuration | Mean | Sample SD | Completed folds |
 |---:|---|---:|---:|---:|
-| 0.5 | Clinical-only | 0.770297699594046 | None | 1 |
-| 0.5 | Full | 0.7253044654939107 | None | 1 |
+| 0.5 | Clinical-only | 0.7822507893549843 | None | 1 |
+| 0.5 | Full | 0.6783942264321153 | None | 1 |
 | 0.75 | Clinical-only | None | None | 0 |
 | 0.75 | Full | None | None | 0 |
 | 1.0 | Clinical-only | 0.7598208476599109 | 0.07678272079706581 | 5 |
 | 1.0 | Full | 0.6524726851411089 | 0.06777572101415535 | 5 |
 
 Ordering statements:
-- 50% completed checkpoint only: Clinical-only − Full = `0.04499323410013534`; ordering changed versus stored 100% = `no`, but this is not the pre-specified completed estimand.
+- 50% completed checkpoint only: Clinical-only − Full = `0.10385656292286893`; ordering changed versus stored 100% = `no`, but this is not the pre-specified completed estimand.
 - 75%: ordering change = `unavailable`; no fit was started.
 - Stored 100% Table 7: Clinical-only − Full = `0.10734816251880197`; 95% CI = `[0.03700289487664033, 0.17268175928129118]`; ordering changed versus itself = `no`.
 

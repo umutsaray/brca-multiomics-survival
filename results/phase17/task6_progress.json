@@ -1,0 +1,14 @@
+{
+  "status": "stopped",
+  "completed_units": 3,
+  "total_units": 30,
+  "remaining_units": 27,
+  "last_checkpoint": "fold1_fraction50_rep3.json",
+  "resume_elapsed_seconds": 2687.272449299926,
+  "cumulative_completed_unit_runtime_seconds": 3321.1354870998766,
+  "mean_completed_unit_runtime_seconds": 1107.0451623666256,
+  "projected_remaining_seconds_including_finalization_reserve": 30490.219383898893,
+  "max_projected_remaining_seconds": 25200.0,
+  "finalization_reserve_seconds": 600.0,
+  "command": "C:\\moenv\\Scripts\\python.exe C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival\\src\\evaluation\\phase17_task6_learning_curve.py --input-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer --repo-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival --output-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival\\results\\phase17 --outer-seed 42 --meth-prefilter 10000 --methylation-chunksize 5000 --knn-neighbors 5 --top-n 200 --cox-penalizer 0.1 --cox-max-steps 50 --bootstrap-iterations 9999 --bootstrap-seed 42 --max-projected-remaining-seconds 25200 --finalization-reserve-seconds 600"
+}

@@ -127,6 +127,9 @@ def fold_summary(records):
                 "completed_folds": len(fold_values), "fold_repetition_mean_cindices": fold_values,
                 "mean": float(np.mean(fold_values)) if fold_values else None,
                 "sample_sd": float(np.std(fold_values, ddof=1)) if len(fold_values) > 1 else None,
+                "mean_training_participants_per_fold":float(np.mean([np.mean(z["training_participants"]) for z in fold_detail])) if fold_detail else None,
+                "mean_training_events_per_fold":float(np.mean([np.mean(z["training_events"]) for z in fold_detail])) if fold_detail else None,
+                "mean_selected_features_per_block":{block:float(np.mean([v[block] for z in fold_detail for v in z["selected_features_per_block"]])) for block in BLOCK_PREFIXES} if fold_detail else None,
                 "folds": fold_detail,
             }
     return result
@@ -203,7 +206,7 @@ def write_outputs(out, records, args, started, status, stop_reason=None, project
             "runtime_stop_rule_seconds": args.max_projected_remaining_seconds,
         },
         "versions": {"python": platform.python_version(), "numpy": np.__version__, "pandas": pd.__version__, "sklearn": sklearn.__version__, "sksurv": sksurv.__version__, "lifelines": lifelines.__version__},
-        "command": " ".join([sys.executable, *sys.argv]), "runtime_seconds": time.perf_counter() - started,
+        "command": " ".join([sys.executable, *sys.argv]), "runtime_seconds": getattr(args,"runtime_offset_seconds",0.0)+time.perf_counter() - started,
         "completed_checkpoint_count": sum(r["fraction"] < 1 for r in records) // len(CONFIGS), "summary": summary,
         "clinical_minus_full_bootstrap": boots, "trends": trends,
     }
@@ -213,12 +216,12 @@ def write_outputs(out, records, args, started, status, stop_reason=None, project
         "RSF and DeepSurv were skipped as a pre-fixed runtime decision. Fractions 50% and 75% use three repetitions; 100% is the stored Table 7 CoxPH result.", "",
     ]
     if stop_reason:
-        lines += [f"Stop reason: {stop_reason}", f"Projected remaining seconds at stop: `{projected}`.", ""]
-    lines += ["## C-index summary", "", "| Fraction | Configuration | Completed folds | Mean | Sample SD | Fold values |", "|---:|---|---:|---:|---:|---|"]
+        lines += ["The reduced design did not complete. Available reduced-fraction values are checkpointed partial results and are not interpreted as the completed learning-curve estimand.","",f"Stop reason: {stop_reason}", f"Projected remaining seconds at stop: `{projected}`.", ""]
+    lines += ["## C-index and training-size summary", "", "| Fraction | Configuration | Completed folds | Mean C-index | Sample SD | Mean training participants/fold | Mean training events/fold | Mean selected features/block | Fold values |", "|---:|---|---:|---:|---:|---:|---:|---|---|"]
     for f in (0.5, 0.75, 1.0):
         for c in CONFIGS:
             z = summary[str(f)][c]
-            lines.append(f"| {f} | {c} | {z['completed_folds']} | {z['mean']} | {z['sample_sd']} | `{json.dumps(z['fold_repetition_mean_cindices'])}` |")
+            lines.append(f"| {f} | {c} | {z['completed_folds']} | {z['mean']} | {z['sample_sd']} | {z['mean_training_participants_per_fold']} | {z['mean_training_events_per_fold']} | `{json.dumps(z['mean_selected_features_per_block'])}` | `{json.dumps(z['fold_repetition_mean_cindices'])}` |")
     lines += ["", "## Clinical-only minus Full bootstrap", "", "| Fraction | Point difference | 95% CI |", "|---:|---:|---|"]
     for f in (0.5, 0.75, 1.0):
         z = boots[str(f)]
@@ -228,6 +231,22 @@ def write_outputs(out, records, args, started, status, stop_reason=None, project
         lines.append(f"- {c}: `{z['label']}`; means at 50%, 75%, 100% = `{json.dumps(z['means_50_75_100'])}`.")
     lines += ["", "Per-fold training participant/event counts, repetition-level C-indices, selected feature counts per block, raw risks, and all bootstrap draws are retained without rounding in the JSON/checkpoints.", "", f"Actual elapsed time (seconds): `{payload['runtime_seconds']}`."]
     (out / "task6_learning_curve.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    return payload
+
+
+def write_progress(out, args, started, completed, total_jobs, runtimes, projected, last_checkpoint=None, status="running"):
+    payload={
+        "status":status,"completed_units":completed,"total_units":total_jobs,
+        "remaining_units":total_jobs-completed,"last_checkpoint":last_checkpoint,
+        "resume_elapsed_seconds":time.perf_counter()-started,
+        "cumulative_completed_unit_runtime_seconds":float(np.sum(runtimes)),
+        "mean_completed_unit_runtime_seconds":float(np.mean(runtimes)) if runtimes else None,
+        "projected_remaining_seconds_including_finalization_reserve":projected,
+        "max_projected_remaining_seconds":args.max_projected_remaining_seconds,
+        "finalization_reserve_seconds":args.finalization_reserve_seconds,
+        "command":" ".join([sys.executable,*sys.argv]),
+    }
+    (out/"task6_progress.json").write_text(json.dumps(payload,indent=2),encoding="utf-8")
     return payload
 
 
@@ -246,6 +265,7 @@ def main():
     p.add_argument("--bootstrap-iterations", type=int, default=9999)
     p.add_argument("--bootstrap-seed", type=int, default=42)
     p.add_argument("--max-projected-remaining-seconds", type=float, default=10800.0)
+    p.add_argument("--finalization-reserve-seconds", type=float, default=600.0)
     a = p.parse_args()
     started = time.perf_counter()
     root, repo, out = a.input_dir.resolve(), a.repo_dir.resolve(), a.output_dir.resolve()
@@ -255,10 +275,19 @@ def main():
     base, y = load_cohort(root, "primary")
     folds = grouped_folds(y, 5, a.outer_seed)
     records = stored_100(repo, y, folds)
+    prior_report=out/"task6_learning_curve.json"
+    a.runtime_offset_seconds=json.loads(prior_report.read_text(encoding="utf-8")).get("runtime_seconds",0.0) if prior_report.is_file() else 0.0
+    completed_runtimes=[]
     for path in sorted(checkpoints.glob("fold*_fraction*_rep*.json")):
-        records.extend(json.loads(path.read_text(encoding="utf-8"))["configurations"])
+        checkpoint=json.loads(path.read_text(encoding="utf-8"));records.extend(checkpoint["configurations"]);completed_runtimes.append(float(checkpoint["job_runtime_seconds"]))
     completed = sum(r["fraction"] < 1 for r in records) // 2
     total_jobs = 5 * len(FRACTIONS) * len(REPETITIONS)
+    initial_projected=(float(np.mean(completed_runtimes))*(total_jobs-completed)+a.finalization_reserve_seconds) if completed_runtimes else None
+    initial=write_progress(out,a,started,completed,total_jobs,completed_runtimes,initial_projected,status="resumed")
+    print(f"resume completed={completed}/{total_jobs} resume_elapsed={initial['resume_elapsed_seconds']} cumulative_unit_runtime={initial['cumulative_completed_unit_runtime_seconds']} projected_remaining={initial_projected}",flush=True)
+    if initial_projected is not None and initial_projected>a.max_projected_remaining_seconds:
+        reason=f"Stopped because projected remaining runtime {initial_projected} seconds exceeded the pre-fixed {a.max_projected_remaining_seconds}-second threshold."
+        write_outputs(out,records,a,started,"stopped",reason,initial_projected);write_progress(out,a,started,completed,total_jobs,completed_runtimes,initial_projected,status="stopped");print(reason,flush=True);return
     prep_args = SimpleNamespace(meth_prefilter=a.meth_prefilter, methylation_chunksize=a.methylation_chunksize, knn_neighbors=a.knn_neighbors)
     for fold, (outer_train, outer_test) in enumerate(folds, 1):
         for fraction_index, fraction in FRACTIONS:
@@ -295,15 +324,18 @@ def main():
                 records.extend(configs)
                 completed += 1
                 elapsed = time.perf_counter() - started
-                projected = elapsed / completed * (total_jobs - completed)
-                print(f"checkpoint={cp.name} runtime={checkpoint['job_runtime_seconds']} projected_remaining={projected}", flush=True)
+                completed_runtimes.append(float(checkpoint["job_runtime_seconds"]))
+                projected = float(np.mean(completed_runtimes)) * (total_jobs - completed) + a.finalization_reserve_seconds
+                progress=write_progress(out,a,started,completed,total_jobs,completed_runtimes,projected,cp.name)
+                print(f"checkpoint={cp.name} runtime={checkpoint['job_runtime_seconds']} completed={completed}/{total_jobs} resume_elapsed={elapsed} cumulative_unit_runtime={progress['cumulative_completed_unit_runtime_seconds']} projected_remaining={projected}", flush=True)
                 if projected > a.max_projected_remaining_seconds:
-                    reason = f"Stopped because projected remaining runtime {projected} seconds exceeded the pre-fixed 10800-second threshold."
+                    reason = f"Stopped because projected remaining runtime {projected} seconds exceeded the pre-fixed {a.max_projected_remaining_seconds}-second threshold."
                     write_outputs(out, records, a, started, "stopped", reason, projected)
+                    write_progress(out,a,started,completed,total_jobs,completed_runtimes,projected,cp.name,"stopped")
                     print(reason, flush=True)
                     return
-                write_outputs(out, records, a, started, "running", projected=projected)
     write_outputs(out, records, a, started, "completed")
+    write_progress(out,a,started,completed,total_jobs,completed_runtimes,0.0,status="completed")
 
 
 if __name__ == "__main__":

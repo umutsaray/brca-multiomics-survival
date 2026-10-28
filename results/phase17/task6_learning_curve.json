@@ -1,8 +1,9 @@
 {
   "task": "Phase 17 Task 6 reduced learning curve",
   "status": "stopped",
-  "stop_reason": "Stopped because projected remaining runtime 20513.152537505142 seconds exceeded the pre-fixed 10800-second threshold.",
-  "projected_remaining_seconds_at_stop": 20513.152537505142,
+  "partial_result_warning": "The reduced design did not complete. Available reduced-fraction values are checkpointed partial results and are not interpreted as the completed learning-curve estimand.",
+  "stop_reason": "Stopped because projected remaining runtime 30490.219383898893 seconds exceeded the pre-fixed 25200.0-second threshold.",
+  "projected_remaining_seconds_at_stop": 30490.219383898893,
   "design_fixed_before_run": {
     "cohort": "corrected primary-tumor-only",
     "models_run": [
@@ -28,7 +29,7 @@
     "FDR_BH_lt": 0.05,
     "bootstrap_iterations": 9999,
     "bootstrap_seed": 42,
-    "runtime_stop_rule_seconds": 10800.0
+    "runtime_stop_rule_seconds": 25200.0
   },
   "versions": {
     "python": "3.14.7",
@@ -38,29 +39,43 @@
     "sksurv": "0.28.0",
     "lifelines": "0.30.3"
   },
-  "command": "C:\\moenv\\Scripts\\python.exe src/evaluation/phase17_task6_learning_curve.py --input-dir .. --repo-dir . --output-dir results/phase17 --outer-seed 42 --meth-prefilter 10000 --methylation-chunksize 5000 --knn-neighbors 5 --top-n 200 --cox-penalizer 0.1 --cox-max-steps 50 --bootstrap-iterations 9999 --bootstrap-seed 42 --max-projected-remaining-seconds 10800",
-  "runtime_seconds": 838.0257824000437,
-  "completed_checkpoint_count": 1,
+  "command": "C:\\moenv\\Scripts\\python.exe C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival\\src\\evaluation\\phase17_task6_learning_curve.py --input-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer --repo-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival --output-dir C:\\Users\\UMUT\\Desktop\\Multi-Omics Data Fusion with Explainable Deep Learning for Survival Prediction in Breast Cancer\\brca-multiomics-survival\\results\\phase17 --outer-seed 42 --meth-prefilter 10000 --methylation-chunksize 5000 --knn-neighbors 5 --top-n 200 --cox-penalizer 0.1 --cox-max-steps 50 --bootstrap-iterations 9999 --bootstrap-seed 42 --max-projected-remaining-seconds 25200 --finalization-reserve-seconds 600",
+  "runtime_seconds": 3525.293533799937,
+  "completed_checkpoint_count": 3,
   "summary": {
     "0.5": {
       "Clinical-only": {
         "completed_folds": 1,
         "fold_repetition_mean_cindices": [
-          0.770297699594046
+          0.7822507893549843
         ],
-        "mean": 0.770297699594046,
+        "mean": 0.7822507893549843,
         "sample_sd": null,
+        "mean_training_participants_per_fold": 304.0,
+        "mean_training_events_per_fold": 39.0,
+        "mean_selected_features_per_block": {
+          "rna": 0.0,
+          "mirna": 0.0,
+          "methylation": 0.0,
+          "clinical": 15.0
+        },
         "folds": [
           {
             "fold": 1,
             "repetition_cindices": [
-              0.770297699594046
+              0.770297699594046,
+              0.7574424898511503,
+              0.8190121786197564
             ],
-            "repetition_mean_cindex": 0.770297699594046,
+            "repetition_mean_cindex": 0.7822507893549843,
             "training_participants": [
+              304,
+              304,
               304
             ],
             "training_events": [
+              39,
+              39,
               39
             ],
             "selected_features_per_block": [
@@ -69,6 +84,18 @@
                 "mirna": 0,
                 "methylation": 0,
                 "clinical": 16
+              },
+              {
+                "rna": 0,
+                "mirna": 0,
+                "methylation": 0,
+                "clinical": 15
+              },
+              {
+                "rna": 0,
+                "mirna": 0,
+                "methylation": 0,
+                "clinical": 14
               }
             ]
           }
@@ -77,21 +104,35 @@
       "Full": {
         "completed_folds": 1,
         "fold_repetition_mean_cindices": [
-          0.7253044654939107
+          0.6783942264321153
         ],
-        "mean": 0.7253044654939107,
+        "mean": 0.6783942264321153,
         "sample_sd": null,
+        "mean_training_participants_per_fold": 304.0,
+        "mean_training_events_per_fold": 39.0,
+        "mean_selected_features_per_block": {
+          "rna": 160.66666666666666,
+          "mirna": 6.666666666666667,
+          "methylation": 25.0,
+          "clinical": 15.0
+        },
         "folds": [
           {
             "fold": 1,
             "repetition_cindices": [
-              0.7253044654939107
+              0.7253044654939107,
+              0.6610284167794317,
+              0.648849797023004
             ],
-            "repetition_mean_cindex": 0.7253044654939107,
+            "repetition_mean_cindex": 0.6783942264321153,
             "training_participants": [
+              304,
+              304,
               304
             ],
             "training_events": [
+              39,
+              39,
               39
             ],
             "selected_features_per_block": [
@@ -100,6 +141,18 @@
                 "mirna": 9,
                 "methylation": 75,
                 "clinical": 16
+              },
+              {
+                "rna": 200,
+                "mirna": 9,
+                "methylation": 0,
+                "clinical": 15
+              },
+              {
+                "rna": 82,
+                "mirna": 2,
+                "methylation": 0,
+                "clinical": 14
               }
             ]
           }
@@ -112,6 +165,9 @@
         "fold_repetition_mean_cindices": [],
         "mean": null,
         "sample_sd": null,
+        "mean_training_participants_per_fold": null,
+        "mean_training_events_per_fold": null,
+        "mean_selected_features_per_block": null,
         "folds": []
       },
       "Full": {
@@ -119,6 +175,9 @@
         "fold_repetition_mean_cindices": [],
         "mean": null,
         "sample_sd": null,
+        "mean_training_participants_per_fold": null,
+        "mean_training_events_per_fold": null,
+        "mean_selected_features_per_block": null,
         "folds": []
       }
     },
@@ -134,6 +193,14 @@
         ],
         "mean": 0.7598208476599109,
         "sample_sd": 0.07678272079706581,
+        "mean_training_participants_per_fold": 609.6,
+        "mean_training_events_per_fold": 79.2,
+        "mean_selected_features_per_block": {
+          "rna": 0.0,
+          "mirna": 0.0,
+          "methylation": 0.0,
+          "clinical": 15.8
+        },
         "folds": [
           {
             "fold": 1,
@@ -253,6 +320,14 @@
         ],
         "mean": 0.6524726851411089,
         "sample_sd": 0.06777572101415535,
+        "mean_training_participants_per_fold": 609.6,
+        "mean_training_events_per_fold": 79.2,
+        "mean_selected_features_per_block": {
+          "rna": 181.4,
+          "mirna": 8.6,
+          "methylation": 3.4,
+          "clinical": 15.8
+        },
         "folds": [
           {
             "fold": 1,
@@ -370,6 +445,7 @@
       "estimand": "unweighted mean across folds of repetition-averaged within-fold Harrell-C differences; Clinical-only minus Full",
       "iterations": 9999,
       "seed": 42,
+      "point_difference": 0.10734816251880197,
       "ci_95": [
         0.03700289487664033,
         0.17268175928129118
@@ -10374,14 +10450,13 @@
         0.15488681213423522,
         0.11727386780511533,
         0.07409763506886373
-      ],
-      "point_difference": 0.10734816251880197
+      ]
     }
   },
   "trends": {
     "Clinical-only": {
       "means_50_75_100": [
-        0.770297699594046,
+        0.7822507893549843,
         null,
         0.7598208476599109
       ],
@@ -10389,22 +10464,11 @@
     },
     "Full": {
       "means_50_75_100": [
-        0.7253044654939107,
+        0.6783942264321153,
         null,
         0.6524726851411089
       ],
       "label": null
     }
-  },
-  "partial_result_warning": "The 50% values contain one completed outer fold and one repetition only, not the pre-specified five-fold repetition-averaged estimand; the 75% analysis was not started. Neither is interpreted as a completed learning-curve result.",
-  "report_finalization": {
-    "command": "C:\\moenv\\Scripts\\python.exe src/evaluation/phase17_task6_finalize.py --json results/phase17/task6_learning_curve.json --markdown results/phase17/task6_learning_curve.md --checkpoint-dir results/phase17/task6_checkpoints",
-    "model_fits_run": 0,
-    "bootstrap_resamples_run": 0,
-    "derived_fields": [
-      "correct checkpoint-file count",
-      "stored-summary Clinical-only minus Full point difference"
-    ],
-    "statistics_replaced": false
   }
 }
