@@ -1,0 +1,324 @@
+{
+  "task": "Phase 16 Task 0(a): HER2 source cross-tabulation and conflict decomposition",
+  "status": "completed",
+  "decision_rules": {
+    "crosstab_sources": [
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type"
+    ],
+    "blank_label": "blank/NA",
+    "conflict_sources": [
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type",
+      "HER2_Final_Status_nature2012"
+    ],
+    "classification": "Distinct normalized nonblank categories are genuine category disagreements; identical normalized categories are wording-only/same-category. No values were recoded.",
+    "model_rerun": false
+  },
+  "n_participants": 762,
+  "crosstab": {
+    "Equivocal": {
+      "Equivocal": 3,
+      "Indeterminate": 0,
+      "Negative": 106,
+      "Positive": 16,
+      "blank/NA": 14
+    },
+    "Indeterminate": {
+      "Equivocal": 0,
+      "Indeterminate": 0,
+      "Negative": 6,
+      "Positive": 2,
+      "blank/NA": 4
+    },
+    "Negative": {
+      "Equivocal": 0,
+      "Indeterminate": 3,
+      "Negative": 49,
+      "Positive": 2,
+      "blank/NA": 331
+    },
+    "Positive": {
+      "Equivocal": 1,
+      "Indeterminate": 1,
+      "Negative": 8,
+      "Positive": 10,
+      "blank/NA": 71
+    },
+    "blank/NA": {
+      "Equivocal": 0,
+      "Indeterminate": 0,
+      "Negative": 45,
+      "Positive": 6,
+      "blank/NA": 84
+    }
+  },
+  "crosstab_row_totals": {
+    "Equivocal": 139,
+    "Indeterminate": 12,
+    "Negative": 385,
+    "Positive": 91,
+    "blank/NA": 135
+  },
+  "crosstab_column_totals": {
+    "Equivocal": 4,
+    "Indeterminate": 4,
+    "Negative": 214,
+    "Positive": 36,
+    "blank/NA": 504
+  },
+  "conflict_participants": 163,
+  "conflict_value_tuples": [
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 70,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 36,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "Positive",
+      "n": 10,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "blank/NA",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 10,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 6,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 6,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Indeterminate",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 5,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "blank/NA",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 3,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "blank/NA",
+      "HER2_Final_Status_nature2012": "Positive",
+      "n": 3,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Negative",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Indeterminate",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 3,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Indeterminate",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "Positive",
+      "n": 2,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Equivocal",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Equivocal",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Indeterminate",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Negative",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Negative",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Equivocal",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Indeterminate",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "Positive",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Negative",
+      "HER2_Final_Status_nature2012": "blank/NA",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    },
+    {
+      "lab_proc_her2_neu_immunohistochemistry_receptor_status": "Positive",
+      "lab_procedure_her2_neu_in_situ_hybrid_outcome_type": "Positive",
+      "HER2_Final_Status_nature2012": "Negative",
+      "n": 1,
+      "classification": "genuine category disagreement"
+    }
+  ],
+  "pairwise_disagreements_within_conflict_participants": [
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Equivocal",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Negative",
+      "n": 106
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Equivocal",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Negative",
+      "n": 74
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Positive",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Negative",
+      "n": 17
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Equivocal",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Positive",
+      "n": 16
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Equivocal",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Positive",
+      "n": 13
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Positive",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Negative",
+      "n": 8
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Indeterminate",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Negative",
+      "n": 6
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Indeterminate",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Negative",
+      "n": 5
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Negative",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Indeterminate",
+      "n": 3
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Indeterminate",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Positive",
+      "n": 2
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Indeterminate",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Positive",
+      "n": 2
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Negative",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Positive",
+      "n": 2
+    },
+    {
+      "source_1": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type",
+      "value_1": "Positive",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Negative",
+      "n": 2
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Positive",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Equivocal",
+      "n": 1
+    },
+    {
+      "source_1": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+      "value_1": "Positive",
+      "source_2_and_value": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type=Indeterminate",
+      "n": 1
+    },
+    {
+      "source_1": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type",
+      "value_1": "Equivocal",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Negative",
+      "n": 1
+    },
+    {
+      "source_1": "lab_procedure_her2_neu_in_situ_hybrid_outcome_type",
+      "value_1": "Negative",
+      "source_2_and_value": "HER2_Final_Status_nature2012=Positive",
+      "n": 1
+    }
+  ],
+  "versions": {
+    "python": "3.14.7",
+    "pandas": "2.3.3"
+  },
+  "seeds": null,
+  "command": "src\\evaluation\\phase16_task0_missing_phase15_items.py --repo-dir .",
+  "runtime_seconds": 0.0567548000253737
+}
